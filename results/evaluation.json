@@ -12,7 +12,7 @@
   "stop_rule_violation_rate_pct": 0.0,
   "duplicate_execution_rate_pct": 0.0,
   "escalation_count": 11,
-  "median_latency_ms": 15.2,
-  "p95_latency_ms": 18.8,
+  "median_latency_ms": 22.35,
+  "p95_latency_ms": 31.87,
   "ai_fallback_rate_pct": 100.0
 }

@@ -15,6 +15,7 @@ class Settings(BaseSettings):
     # Razorpay Integration Credentials
     RAZORPAY_KEY_ID: Optional[str] = None
     RAZORPAY_KEY_SECRET: Optional[str] = None
+    RAZORPAY_MODE: str = "test"
     RAZORPAY_WEBHOOK_SECRET: str = "whsec_test_secret_12345"
     
     # AI Provider Settings

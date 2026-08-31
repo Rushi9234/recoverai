@@ -19,5 +19,5 @@
 - **Escalated Cases:** `11`
 
 ## Operational Latency
-- **Median Decision Latency:** `15.2 ms`
-- **P95 Decision Latency:** `18.8 ms`
+- **Median Decision Latency:** `22.35 ms`
+- **P95 Decision Latency:** `31.87 ms`

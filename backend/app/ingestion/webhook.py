@@ -1,7 +1,8 @@
 import hmac
 import hashlib
 import json
-from typing import Dict, Any, Tuple
+import uuid
+from typing import Dict, Any, Tuple, Optional
 from fastapi import APIRouter, Request, Header, HTTPException, status, Depends
 from sqlalchemy.orm import Session
 from backend.app.core.config import settings
@@ -104,8 +105,6 @@ class WebhookNormalizer:
         }
 
         return customer, sub, invoice, failure_info
-
-import uuid
 
 @router.post("/razorpay", summary="Razorpay Webhook Endpoint")
 async def handle_razorpay_webhook(
