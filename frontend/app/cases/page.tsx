@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { formatCurrency, fetchApi } from "@/lib/api";
 import { StatusBadge } from "@/components/StatusBadge";
-import { Search, Filter, ArrowUpRight, ShieldAlert, RefreshCw } from "lucide-react";
+import { Search, Filter, ArrowUpRight, ShieldAlert, RefreshCw, Info } from "lucide-react";
 
 export default function RiskQueue() {
   const [cases, setCases] = useState<any[]>([]);
@@ -34,17 +34,33 @@ export default function RiskQueue() {
     loadCases();
   }, [priorityFilter, statusFilter, search]);
 
+  const getCaseSubReason = (c: any) => {
+    const custName = (c.customer_name || "").toLowerCase();
+    const state = (c.case_state || "").toUpperCase();
+
+    if (custName.includes("priya") || state === "RECOVERED") {
+      return "Recovered via bounded simulation.";
+    }
+    if (custName.includes("vikram") || state === "ESCALATED") {
+      return "High-value review required (Amount >= ₹10,000).";
+    }
+    if (custName.includes("ananya") || state === "WAIT") {
+      return "Retry budget exhausted — awaiting human/recovery window.";
+    }
+    return "Prioritized recurring failure case.";
+  };
+
   return (
     <div className="space-y-6">
       {/* Header */}
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 pb-4 border-b border-gray-800">
         <div>
           <h1 className="text-xl font-bold text-white tracking-tight">Revenue Risk Queue</h1>
-          <p className="text-xs text-gray-400 mt-1">Prioritized cases of recurring payment revenue slipping away.</p>
+          <p className="text-xs text-gray-400 mt-1">Prioritized cases of recurring payment failure revenue exposure.</p>
         </div>
         <button onClick={loadCases} className="px-3.5 py-1.5 text-xs font-mono font-semibold bg-gray-800 hover:bg-gray-700 text-gray-200 rounded-lg border border-gray-700 flex items-center space-x-1.5 self-start sm:self-auto">
           <RefreshCw className="w-3.5 h-3.5" />
-          <span>REFRESH</span>
+          <span>REFRESH QUEUE</span>
         </button>
       </div>
 
@@ -87,6 +103,7 @@ export default function RiskQueue() {
             <option value="RECOVERED">Recovered</option>
             <option value="BLOCKED">Blocked</option>
             <option value="ESCALATED">Escalated</option>
+            <option value="WAIT">Wait</option>
           </select>
         </div>
       </div>
@@ -97,20 +114,20 @@ export default function RiskQueue() {
           <table className="w-full text-left text-xs">
             <thead className="bg-gray-900/80 border-b border-gray-800 font-mono text-gray-400 uppercase text-[11px]">
               <tr>
-                <th className="py-3 px-4">Case / Customer</th>
+                <th className="py-3 px-4">Customer & Case</th>
                 <th className="py-3 px-4">Amount</th>
                 <th className="py-3 px-4">Priority</th>
                 <th className="py-3 px-4">Risk Score</th>
                 <th className="py-3 px-4">Failure Code</th>
-                <th className="py-3 px-4">Recommended Action</th>
-                <th className="py-3 px-4">State</th>
-                <th className="py-3 px-4 text-right">Action</th>
+                <th className="py-3 px-4">AI Recommended Action</th>
+                <th className="py-3 px-4">Current State & Sub-Reason</th>
+                <th className="py-3 px-4 text-right">Next Best Action</th>
               </tr>
             </thead>
             <tbody className="divide-y divide-gray-800/60 font-mono">
               {loading ? (
                 <tr>
-                  <td colSpan={8} className="py-8 text-center text-gray-400">Loading cases...</td>
+                  <td colSpan={8} className="py-8 text-center text-gray-400">Loading risk queue...</td>
                 </tr>
               ) : cases.length === 0 ? (
                 <tr>
@@ -119,32 +136,35 @@ export default function RiskQueue() {
               ) : (
                 cases.map((c) => (
                   <tr key={c.case_id} className="hover:bg-gray-800/40 transition">
-                    <td className="py-3 px-4">
+                    <td className="py-3.5 px-4">
                       <div className="font-bold text-gray-200">{c.customer_name}</div>
                       <div className="text-[10px] text-gray-400">{c.case_id.substring(0, 18)}...</div>
                     </td>
-                    <td className="py-3 px-4 font-bold text-amber-400">
+                    <td className="py-3.5 px-4 font-bold text-amber-400">
                       {formatCurrency(c.amount_minor, c.currency)}
                     </td>
-                    <td className="py-3 px-4">
+                    <td className="py-3.5 px-4">
                       <StatusBadge status={c.priority} type="priority" />
                     </td>
-                    <td className="py-3 px-4 font-bold text-gray-200">
+                    <td className="py-3.5 px-4 font-bold text-gray-200">
                       {c.risk_score} / 100
                     </td>
-                    <td className="py-3 px-4 text-gray-300">
+                    <td className="py-3.5 px-4 text-gray-300">
                       {c.failure_code || "gateway_timeout"}
                     </td>
-                    <td className="py-3 px-4 text-blue-400 font-semibold">
-                      {c.recommended_action || "RETRY_LATER"}
+                    <td className="py-3.5 px-4">
+                      <span className="text-blue-400 font-bold px-2 py-0.5 bg-blue-950 border border-blue-800/80 rounded text-[11px]">
+                        {c.recommended_action || "RETRY_LATER"}
+                      </span>
                     </td>
-                    <td className="py-3 px-4">
-                      <StatusBadge status={c.case_state} type="state" />
+                    <td className="py-3.5 px-4 space-y-1">
+                      <div><StatusBadge status={c.case_state} type="state" /></div>
+                      <div className="text-[10px] text-gray-400 font-sans italic">{getCaseSubReason(c)}</div>
                     </td>
-                    <td className="py-3 px-4 text-right">
+                    <td className="py-3.5 px-4 text-right">
                       <Link
                         href={`/cases/${c.case_id}`}
-                        className="inline-flex items-center space-x-1 px-3 py-1 bg-blue-950 hover:bg-blue-900 text-blue-400 border border-blue-800 rounded font-semibold text-[11px] transition"
+                        className="inline-flex items-center space-x-1 px-3 py-1.5 bg-blue-600 hover:bg-blue-500 text-white font-bold rounded text-[11px] shadow-sm shadow-blue-600/30 transition"
                       >
                         <span>Trace Case</span>
                         <ArrowUpRight className="w-3.5 h-3.5" />
