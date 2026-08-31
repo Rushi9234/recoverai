@@ -7,7 +7,7 @@ class Settings(BaseSettings):
     API_PREFIX: str = "/api"
     
     # Database
-    DATABASE_URL: str = "sqlite:///./recoverai.db"
+    DATABASE_URL: str = "sqlite:////tmp/recoverai.db" if __import__("os").environ.get("VERCEL") else "sqlite:///./recoverai.db"
     
     # Application Environment
     ENVIRONMENT: str = "TEST"
