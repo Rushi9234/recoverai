@@ -1,0 +1,18 @@
+{
+  "dataset": "data/synthetic_50.json",
+  "total_cases_processed": 50,
+  "total_revenue_at_risk_minor": 22395000,
+  "observed_recovered_minor": 0,
+  "simulated_recovered_minor": 9446900,
+  "recovery_rate": 0.4218,
+  "risk_detection_accuracy_pct": 100.0,
+  "diagnosis_accuracy_pct": 94.0,
+  "recommendation_accuracy_pct": 80.0,
+  "unsafe_action_rate_pct": 0.0,
+  "stop_rule_violation_rate_pct": 0.0,
+  "duplicate_execution_rate_pct": 0.0,
+  "escalation_count": 11,
+  "median_latency_ms": 15.2,
+  "p95_latency_ms": 18.8,
+  "ai_fallback_rate_pct": 100.0
+}

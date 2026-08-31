@@ -1,0 +1,1752 @@
+{
+  "synth_case_0001": {
+    "case_id": "synth_case_0001",
+    "ground_truth_category": "DUPLICATE_EVENT",
+    "ground_truth_action": "STOP",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": false
+  },
+  "synth_case_0002": {
+    "case_id": "synth_case_0002",
+    "ground_truth_category": "TRANSIENT_TECHNICAL_FAILURE",
+    "ground_truth_action": "RETRY_LATER",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": true
+  },
+  "synth_case_0003": {
+    "case_id": "synth_case_0003",
+    "ground_truth_category": "TRANSIENT_TECHNICAL_FAILURE",
+    "ground_truth_action": "RETRY_LATER",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": true
+  },
+  "synth_case_0004": {
+    "case_id": "synth_case_0004",
+    "ground_truth_category": "TRANSIENT_TECHNICAL_FAILURE",
+    "ground_truth_action": "RETRY_LATER",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": true
+  },
+  "synth_case_0005": {
+    "case_id": "synth_case_0005",
+    "ground_truth_category": "MANDATE_OR_CUSTOMER_ACTION_REQUIRED",
+    "ground_truth_action": "PAYMENT_METHOD_RECOVERY",
+    "ground_truth_should_contact": true,
+    "ground_truth_recoverable": false
+  },
+  "synth_case_0006": {
+    "case_id": "synth_case_0006",
+    "ground_truth_category": "INSUFFICIENT_FUNDS",
+    "ground_truth_action": "RETRY_LATER",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": true
+  },
+  "synth_case_0007": {
+    "case_id": "synth_case_0007",
+    "ground_truth_category": "RETRY_BUDGET_EXHAUSTED",
+    "ground_truth_action": "HUMAN_ESCALATION",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": false
+  },
+  "synth_case_0008": {
+    "case_id": "synth_case_0008",
+    "ground_truth_category": "REPEATED_DECLINE",
+    "ground_truth_action": "HUMAN_ESCALATION",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": false
+  },
+  "synth_case_0009": {
+    "case_id": "synth_case_0009",
+    "ground_truth_category": "SUCCESSFUL_RETRY",
+    "ground_truth_action": "RETRY_LATER",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": true
+  },
+  "synth_case_0010": {
+    "case_id": "synth_case_0010",
+    "ground_truth_category": "RETRY_BUDGET_EXHAUSTED",
+    "ground_truth_action": "HUMAN_ESCALATION",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": false
+  },
+  "synth_case_0011": {
+    "case_id": "synth_case_0011",
+    "ground_truth_category": "EXPIRED_PAYMENT_METHOD",
+    "ground_truth_action": "PAYMENT_METHOD_RECOVERY",
+    "ground_truth_should_contact": true,
+    "ground_truth_recoverable": true
+  },
+  "synth_case_0012": {
+    "case_id": "synth_case_0012",
+    "ground_truth_category": "SUCCESSFUL_RETRY",
+    "ground_truth_action": "RETRY_LATER",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": true
+  },
+  "synth_case_0013": {
+    "case_id": "synth_case_0013",
+    "ground_truth_category": "REPEATED_DECLINE",
+    "ground_truth_action": "HUMAN_ESCALATION",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": false
+  },
+  "synth_case_0014": {
+    "case_id": "synth_case_0014",
+    "ground_truth_category": "TRANSIENT_TECHNICAL_FAILURE",
+    "ground_truth_action": "RETRY_LATER",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": true
+  },
+  "synth_case_0015": {
+    "case_id": "synth_case_0015",
+    "ground_truth_category": "UNKNOWN_OR_UNRESOLVED",
+    "ground_truth_action": "HUMAN_ESCALATION",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": false
+  },
+  "synth_case_0016": {
+    "case_id": "synth_case_0016",
+    "ground_truth_category": "TRANSIENT_TECHNICAL_FAILURE",
+    "ground_truth_action": "RETRY_LATER",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": true
+  },
+  "synth_case_0017": {
+    "case_id": "synth_case_0017",
+    "ground_truth_category": "INSUFFICIENT_FUNDS",
+    "ground_truth_action": "RETRY_LATER",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": true
+  },
+  "synth_case_0018": {
+    "case_id": "synth_case_0018",
+    "ground_truth_category": "REPEATED_DECLINE",
+    "ground_truth_action": "HUMAN_ESCALATION",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": false
+  },
+  "synth_case_0019": {
+    "case_id": "synth_case_0019",
+    "ground_truth_category": "TRANSIENT_TECHNICAL_FAILURE",
+    "ground_truth_action": "RETRY_LATER",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": true
+  },
+  "synth_case_0020": {
+    "case_id": "synth_case_0020",
+    "ground_truth_category": "EXPIRED_PAYMENT_METHOD",
+    "ground_truth_action": "PAYMENT_METHOD_RECOVERY",
+    "ground_truth_should_contact": true,
+    "ground_truth_recoverable": true
+  },
+  "synth_case_0021": {
+    "case_id": "synth_case_0021",
+    "ground_truth_category": "RETRY_BUDGET_EXHAUSTED",
+    "ground_truth_action": "HUMAN_ESCALATION",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": false
+  },
+  "synth_case_0022": {
+    "case_id": "synth_case_0022",
+    "ground_truth_category": "REPEATED_DECLINE",
+    "ground_truth_action": "HUMAN_ESCALATION",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": false
+  },
+  "synth_case_0023": {
+    "case_id": "synth_case_0023",
+    "ground_truth_category": "INSUFFICIENT_FUNDS",
+    "ground_truth_action": "RETRY_LATER",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": true
+  },
+  "synth_case_0024": {
+    "case_id": "synth_case_0024",
+    "ground_truth_category": "REPEATED_DECLINE",
+    "ground_truth_action": "HUMAN_ESCALATION",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": false
+  },
+  "synth_case_0025": {
+    "case_id": "synth_case_0025",
+    "ground_truth_category": "REPEATED_DECLINE",
+    "ground_truth_action": "HUMAN_ESCALATION",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": false
+  },
+  "synth_case_0026": {
+    "case_id": "synth_case_0026",
+    "ground_truth_category": "RETRY_BUDGET_EXHAUSTED",
+    "ground_truth_action": "HUMAN_ESCALATION",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": false
+  },
+  "synth_case_0027": {
+    "case_id": "synth_case_0027",
+    "ground_truth_category": "INSUFFICIENT_FUNDS",
+    "ground_truth_action": "RETRY_LATER",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": true
+  },
+  "synth_case_0028": {
+    "case_id": "synth_case_0028",
+    "ground_truth_category": "MANDATE_OR_CUSTOMER_ACTION_REQUIRED",
+    "ground_truth_action": "PAYMENT_METHOD_RECOVERY",
+    "ground_truth_should_contact": true,
+    "ground_truth_recoverable": false
+  },
+  "synth_case_0029": {
+    "case_id": "synth_case_0029",
+    "ground_truth_category": "DUPLICATE_EVENT",
+    "ground_truth_action": "STOP",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": false
+  },
+  "synth_case_0030": {
+    "case_id": "synth_case_0030",
+    "ground_truth_category": "MANDATE_OR_CUSTOMER_ACTION_REQUIRED",
+    "ground_truth_action": "PAYMENT_METHOD_RECOVERY",
+    "ground_truth_should_contact": true,
+    "ground_truth_recoverable": false
+  },
+  "synth_case_0031": {
+    "case_id": "synth_case_0031",
+    "ground_truth_category": "RETRY_BUDGET_EXHAUSTED",
+    "ground_truth_action": "HUMAN_ESCALATION",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": false
+  },
+  "synth_case_0032": {
+    "case_id": "synth_case_0032",
+    "ground_truth_category": "SUCCESSFUL_RETRY",
+    "ground_truth_action": "RETRY_LATER",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": true
+  },
+  "synth_case_0033": {
+    "case_id": "synth_case_0033",
+    "ground_truth_category": "REPEATED_DECLINE",
+    "ground_truth_action": "HUMAN_ESCALATION",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": false
+  },
+  "synth_case_0034": {
+    "case_id": "synth_case_0034",
+    "ground_truth_category": "INSUFFICIENT_FUNDS",
+    "ground_truth_action": "RETRY_LATER",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": true
+  },
+  "synth_case_0035": {
+    "case_id": "synth_case_0035",
+    "ground_truth_category": "REPEATED_DECLINE",
+    "ground_truth_action": "HUMAN_ESCALATION",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": false
+  },
+  "synth_case_0036": {
+    "case_id": "synth_case_0036",
+    "ground_truth_category": "TRANSIENT_TECHNICAL_FAILURE",
+    "ground_truth_action": "RETRY_LATER",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": true
+  },
+  "synth_case_0037": {
+    "case_id": "synth_case_0037",
+    "ground_truth_category": "EXPIRED_PAYMENT_METHOD",
+    "ground_truth_action": "PAYMENT_METHOD_RECOVERY",
+    "ground_truth_should_contact": true,
+    "ground_truth_recoverable": true
+  },
+  "synth_case_0038": {
+    "case_id": "synth_case_0038",
+    "ground_truth_category": "RETRY_BUDGET_EXHAUSTED",
+    "ground_truth_action": "HUMAN_ESCALATION",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": false
+  },
+  "synth_case_0039": {
+    "case_id": "synth_case_0039",
+    "ground_truth_category": "SUCCESSFUL_RETRY",
+    "ground_truth_action": "RETRY_LATER",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": true
+  },
+  "synth_case_0040": {
+    "case_id": "synth_case_0040",
+    "ground_truth_category": "INSUFFICIENT_FUNDS",
+    "ground_truth_action": "RETRY_LATER",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": true
+  },
+  "synth_case_0041": {
+    "case_id": "synth_case_0041",
+    "ground_truth_category": "INSUFFICIENT_FUNDS",
+    "ground_truth_action": "RETRY_LATER",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": true
+  },
+  "synth_case_0042": {
+    "case_id": "synth_case_0042",
+    "ground_truth_category": "REPEATED_DECLINE",
+    "ground_truth_action": "HUMAN_ESCALATION",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": false
+  },
+  "synth_case_0043": {
+    "case_id": "synth_case_0043",
+    "ground_truth_category": "EXPIRED_PAYMENT_METHOD",
+    "ground_truth_action": "PAYMENT_METHOD_RECOVERY",
+    "ground_truth_should_contact": true,
+    "ground_truth_recoverable": true
+  },
+  "synth_case_0044": {
+    "case_id": "synth_case_0044",
+    "ground_truth_category": "SUCCESSFUL_RETRY",
+    "ground_truth_action": "RETRY_LATER",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": true
+  },
+  "synth_case_0045": {
+    "case_id": "synth_case_0045",
+    "ground_truth_category": "EXPIRED_PAYMENT_METHOD",
+    "ground_truth_action": "PAYMENT_METHOD_RECOVERY",
+    "ground_truth_should_contact": true,
+    "ground_truth_recoverable": true
+  },
+  "synth_case_0046": {
+    "case_id": "synth_case_0046",
+    "ground_truth_category": "DUPLICATE_EVENT",
+    "ground_truth_action": "STOP",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": false
+  },
+  "synth_case_0047": {
+    "case_id": "synth_case_0047",
+    "ground_truth_category": "UNKNOWN_OR_UNRESOLVED",
+    "ground_truth_action": "HUMAN_ESCALATION",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": false
+  },
+  "synth_case_0048": {
+    "case_id": "synth_case_0048",
+    "ground_truth_category": "EXPIRED_PAYMENT_METHOD",
+    "ground_truth_action": "PAYMENT_METHOD_RECOVERY",
+    "ground_truth_should_contact": true,
+    "ground_truth_recoverable": true
+  },
+  "synth_case_0049": {
+    "case_id": "synth_case_0049",
+    "ground_truth_category": "RETRY_BUDGET_EXHAUSTED",
+    "ground_truth_action": "HUMAN_ESCALATION",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": false
+  },
+  "synth_case_0050": {
+    "case_id": "synth_case_0050",
+    "ground_truth_category": "REPEATED_DECLINE",
+    "ground_truth_action": "HUMAN_ESCALATION",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": false
+  },
+  "synth_case_0051": {
+    "case_id": "synth_case_0051",
+    "ground_truth_category": "TRANSIENT_TECHNICAL_FAILURE",
+    "ground_truth_action": "RETRY_LATER",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": true
+  },
+  "synth_case_0052": {
+    "case_id": "synth_case_0052",
+    "ground_truth_category": "DUPLICATE_EVENT",
+    "ground_truth_action": "STOP",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": false
+  },
+  "synth_case_0053": {
+    "case_id": "synth_case_0053",
+    "ground_truth_category": "TRANSIENT_TECHNICAL_FAILURE",
+    "ground_truth_action": "RETRY_LATER",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": true
+  },
+  "synth_case_0054": {
+    "case_id": "synth_case_0054",
+    "ground_truth_category": "INSUFFICIENT_FUNDS",
+    "ground_truth_action": "RETRY_LATER",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": true
+  },
+  "synth_case_0055": {
+    "case_id": "synth_case_0055",
+    "ground_truth_category": "TRANSIENT_TECHNICAL_FAILURE",
+    "ground_truth_action": "RETRY_LATER",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": true
+  },
+  "synth_case_0056": {
+    "case_id": "synth_case_0056",
+    "ground_truth_category": "INSUFFICIENT_FUNDS",
+    "ground_truth_action": "RETRY_LATER",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": true
+  },
+  "synth_case_0057": {
+    "case_id": "synth_case_0057",
+    "ground_truth_category": "EXPIRED_PAYMENT_METHOD",
+    "ground_truth_action": "PAYMENT_METHOD_RECOVERY",
+    "ground_truth_should_contact": true,
+    "ground_truth_recoverable": true
+  },
+  "synth_case_0058": {
+    "case_id": "synth_case_0058",
+    "ground_truth_category": "EXPIRED_PAYMENT_METHOD",
+    "ground_truth_action": "PAYMENT_METHOD_RECOVERY",
+    "ground_truth_should_contact": true,
+    "ground_truth_recoverable": true
+  },
+  "synth_case_0059": {
+    "case_id": "synth_case_0059",
+    "ground_truth_category": "RETRY_BUDGET_EXHAUSTED",
+    "ground_truth_action": "HUMAN_ESCALATION",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": false
+  },
+  "synth_case_0060": {
+    "case_id": "synth_case_0060",
+    "ground_truth_category": "EXPIRED_PAYMENT_METHOD",
+    "ground_truth_action": "PAYMENT_METHOD_RECOVERY",
+    "ground_truth_should_contact": true,
+    "ground_truth_recoverable": true
+  },
+  "synth_case_0061": {
+    "case_id": "synth_case_0061",
+    "ground_truth_category": "TRANSIENT_TECHNICAL_FAILURE",
+    "ground_truth_action": "RETRY_LATER",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": true
+  },
+  "synth_case_0062": {
+    "case_id": "synth_case_0062",
+    "ground_truth_category": "INSUFFICIENT_FUNDS",
+    "ground_truth_action": "RETRY_LATER",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": true
+  },
+  "synth_case_0063": {
+    "case_id": "synth_case_0063",
+    "ground_truth_category": "INSUFFICIENT_FUNDS",
+    "ground_truth_action": "RETRY_LATER",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": true
+  },
+  "synth_case_0064": {
+    "case_id": "synth_case_0064",
+    "ground_truth_category": "SUCCESSFUL_RETRY",
+    "ground_truth_action": "RETRY_LATER",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": true
+  },
+  "synth_case_0065": {
+    "case_id": "synth_case_0065",
+    "ground_truth_category": "EXPIRED_PAYMENT_METHOD",
+    "ground_truth_action": "PAYMENT_METHOD_RECOVERY",
+    "ground_truth_should_contact": true,
+    "ground_truth_recoverable": true
+  },
+  "synth_case_0066": {
+    "case_id": "synth_case_0066",
+    "ground_truth_category": "INSUFFICIENT_FUNDS",
+    "ground_truth_action": "RETRY_LATER",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": true
+  },
+  "synth_case_0067": {
+    "case_id": "synth_case_0067",
+    "ground_truth_category": "REPEATED_DECLINE",
+    "ground_truth_action": "HUMAN_ESCALATION",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": false
+  },
+  "synth_case_0068": {
+    "case_id": "synth_case_0068",
+    "ground_truth_category": "RETRY_BUDGET_EXHAUSTED",
+    "ground_truth_action": "HUMAN_ESCALATION",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": false
+  },
+  "synth_case_0069": {
+    "case_id": "synth_case_0069",
+    "ground_truth_category": "INSUFFICIENT_FUNDS",
+    "ground_truth_action": "RETRY_LATER",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": true
+  },
+  "synth_case_0070": {
+    "case_id": "synth_case_0070",
+    "ground_truth_category": "EXPIRED_PAYMENT_METHOD",
+    "ground_truth_action": "PAYMENT_METHOD_RECOVERY",
+    "ground_truth_should_contact": true,
+    "ground_truth_recoverable": true
+  },
+  "synth_case_0071": {
+    "case_id": "synth_case_0071",
+    "ground_truth_category": "REPEATED_DECLINE",
+    "ground_truth_action": "HUMAN_ESCALATION",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": false
+  },
+  "synth_case_0072": {
+    "case_id": "synth_case_0072",
+    "ground_truth_category": "REPEATED_DECLINE",
+    "ground_truth_action": "HUMAN_ESCALATION",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": false
+  },
+  "synth_case_0073": {
+    "case_id": "synth_case_0073",
+    "ground_truth_category": "TRANSIENT_TECHNICAL_FAILURE",
+    "ground_truth_action": "RETRY_LATER",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": true
+  },
+  "synth_case_0074": {
+    "case_id": "synth_case_0074",
+    "ground_truth_category": "RETRY_BUDGET_EXHAUSTED",
+    "ground_truth_action": "HUMAN_ESCALATION",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": false
+  },
+  "synth_case_0075": {
+    "case_id": "synth_case_0075",
+    "ground_truth_category": "RETRY_BUDGET_EXHAUSTED",
+    "ground_truth_action": "HUMAN_ESCALATION",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": false
+  },
+  "synth_case_0076": {
+    "case_id": "synth_case_0076",
+    "ground_truth_category": "REPEATED_DECLINE",
+    "ground_truth_action": "HUMAN_ESCALATION",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": false
+  },
+  "synth_case_0077": {
+    "case_id": "synth_case_0077",
+    "ground_truth_category": "INSUFFICIENT_FUNDS",
+    "ground_truth_action": "RETRY_LATER",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": true
+  },
+  "synth_case_0078": {
+    "case_id": "synth_case_0078",
+    "ground_truth_category": "TRANSIENT_TECHNICAL_FAILURE",
+    "ground_truth_action": "RETRY_LATER",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": true
+  },
+  "synth_case_0079": {
+    "case_id": "synth_case_0079",
+    "ground_truth_category": "EXPIRED_PAYMENT_METHOD",
+    "ground_truth_action": "PAYMENT_METHOD_RECOVERY",
+    "ground_truth_should_contact": true,
+    "ground_truth_recoverable": true
+  },
+  "synth_case_0080": {
+    "case_id": "synth_case_0080",
+    "ground_truth_category": "EXPIRED_PAYMENT_METHOD",
+    "ground_truth_action": "PAYMENT_METHOD_RECOVERY",
+    "ground_truth_should_contact": true,
+    "ground_truth_recoverable": true
+  },
+  "synth_case_0081": {
+    "case_id": "synth_case_0081",
+    "ground_truth_category": "RETRY_BUDGET_EXHAUSTED",
+    "ground_truth_action": "HUMAN_ESCALATION",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": false
+  },
+  "synth_case_0082": {
+    "case_id": "synth_case_0082",
+    "ground_truth_category": "TRANSIENT_TECHNICAL_FAILURE",
+    "ground_truth_action": "RETRY_LATER",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": true
+  },
+  "synth_case_0083": {
+    "case_id": "synth_case_0083",
+    "ground_truth_category": "INSUFFICIENT_FUNDS",
+    "ground_truth_action": "RETRY_LATER",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": true
+  },
+  "synth_case_0084": {
+    "case_id": "synth_case_0084",
+    "ground_truth_category": "EXPIRED_PAYMENT_METHOD",
+    "ground_truth_action": "PAYMENT_METHOD_RECOVERY",
+    "ground_truth_should_contact": true,
+    "ground_truth_recoverable": true
+  },
+  "synth_case_0085": {
+    "case_id": "synth_case_0085",
+    "ground_truth_category": "RETRY_BUDGET_EXHAUSTED",
+    "ground_truth_action": "HUMAN_ESCALATION",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": false
+  },
+  "synth_case_0086": {
+    "case_id": "synth_case_0086",
+    "ground_truth_category": "SUCCESSFUL_RETRY",
+    "ground_truth_action": "RETRY_LATER",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": true
+  },
+  "synth_case_0087": {
+    "case_id": "synth_case_0087",
+    "ground_truth_category": "EXPIRED_PAYMENT_METHOD",
+    "ground_truth_action": "PAYMENT_METHOD_RECOVERY",
+    "ground_truth_should_contact": true,
+    "ground_truth_recoverable": true
+  },
+  "synth_case_0088": {
+    "case_id": "synth_case_0088",
+    "ground_truth_category": "INSUFFICIENT_FUNDS",
+    "ground_truth_action": "RETRY_LATER",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": true
+  },
+  "synth_case_0089": {
+    "case_id": "synth_case_0089",
+    "ground_truth_category": "REPEATED_DECLINE",
+    "ground_truth_action": "HUMAN_ESCALATION",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": false
+  },
+  "synth_case_0090": {
+    "case_id": "synth_case_0090",
+    "ground_truth_category": "REPEATED_DECLINE",
+    "ground_truth_action": "HUMAN_ESCALATION",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": false
+  },
+  "synth_case_0091": {
+    "case_id": "synth_case_0091",
+    "ground_truth_category": "INSUFFICIENT_FUNDS",
+    "ground_truth_action": "RETRY_LATER",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": true
+  },
+  "synth_case_0092": {
+    "case_id": "synth_case_0092",
+    "ground_truth_category": "INSUFFICIENT_FUNDS",
+    "ground_truth_action": "RETRY_LATER",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": true
+  },
+  "synth_case_0093": {
+    "case_id": "synth_case_0093",
+    "ground_truth_category": "TRANSIENT_TECHNICAL_FAILURE",
+    "ground_truth_action": "RETRY_LATER",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": true
+  },
+  "synth_case_0094": {
+    "case_id": "synth_case_0094",
+    "ground_truth_category": "TRANSIENT_TECHNICAL_FAILURE",
+    "ground_truth_action": "RETRY_LATER",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": true
+  },
+  "synth_case_0095": {
+    "case_id": "synth_case_0095",
+    "ground_truth_category": "UNKNOWN_OR_UNRESOLVED",
+    "ground_truth_action": "HUMAN_ESCALATION",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": false
+  },
+  "synth_case_0096": {
+    "case_id": "synth_case_0096",
+    "ground_truth_category": "TRANSIENT_TECHNICAL_FAILURE",
+    "ground_truth_action": "RETRY_LATER",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": true
+  },
+  "synth_case_0097": {
+    "case_id": "synth_case_0097",
+    "ground_truth_category": "TRANSIENT_TECHNICAL_FAILURE",
+    "ground_truth_action": "RETRY_LATER",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": true
+  },
+  "synth_case_0098": {
+    "case_id": "synth_case_0098",
+    "ground_truth_category": "EXPIRED_PAYMENT_METHOD",
+    "ground_truth_action": "PAYMENT_METHOD_RECOVERY",
+    "ground_truth_should_contact": true,
+    "ground_truth_recoverable": true
+  },
+  "synth_case_0099": {
+    "case_id": "synth_case_0099",
+    "ground_truth_category": "INSUFFICIENT_FUNDS",
+    "ground_truth_action": "RETRY_LATER",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": true
+  },
+  "synth_case_0100": {
+    "case_id": "synth_case_0100",
+    "ground_truth_category": "DUPLICATE_EVENT",
+    "ground_truth_action": "STOP",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": false
+  },
+  "synth_case_0101": {
+    "case_id": "synth_case_0101",
+    "ground_truth_category": "EXPIRED_PAYMENT_METHOD",
+    "ground_truth_action": "PAYMENT_METHOD_RECOVERY",
+    "ground_truth_should_contact": true,
+    "ground_truth_recoverable": true
+  },
+  "synth_case_0102": {
+    "case_id": "synth_case_0102",
+    "ground_truth_category": "INSUFFICIENT_FUNDS",
+    "ground_truth_action": "RETRY_LATER",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": true
+  },
+  "synth_case_0103": {
+    "case_id": "synth_case_0103",
+    "ground_truth_category": "TRANSIENT_TECHNICAL_FAILURE",
+    "ground_truth_action": "RETRY_LATER",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": true
+  },
+  "synth_case_0104": {
+    "case_id": "synth_case_0104",
+    "ground_truth_category": "REPEATED_DECLINE",
+    "ground_truth_action": "HUMAN_ESCALATION",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": false
+  },
+  "synth_case_0105": {
+    "case_id": "synth_case_0105",
+    "ground_truth_category": "REPEATED_DECLINE",
+    "ground_truth_action": "HUMAN_ESCALATION",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": false
+  },
+  "synth_case_0106": {
+    "case_id": "synth_case_0106",
+    "ground_truth_category": "EXPIRED_PAYMENT_METHOD",
+    "ground_truth_action": "PAYMENT_METHOD_RECOVERY",
+    "ground_truth_should_contact": true,
+    "ground_truth_recoverable": true
+  },
+  "synth_case_0107": {
+    "case_id": "synth_case_0107",
+    "ground_truth_category": "REPEATED_DECLINE",
+    "ground_truth_action": "HUMAN_ESCALATION",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": false
+  },
+  "synth_case_0108": {
+    "case_id": "synth_case_0108",
+    "ground_truth_category": "DUPLICATE_EVENT",
+    "ground_truth_action": "STOP",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": false
+  },
+  "synth_case_0109": {
+    "case_id": "synth_case_0109",
+    "ground_truth_category": "RETRY_BUDGET_EXHAUSTED",
+    "ground_truth_action": "HUMAN_ESCALATION",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": false
+  },
+  "synth_case_0110": {
+    "case_id": "synth_case_0110",
+    "ground_truth_category": "INSUFFICIENT_FUNDS",
+    "ground_truth_action": "RETRY_LATER",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": true
+  },
+  "synth_case_0111": {
+    "case_id": "synth_case_0111",
+    "ground_truth_category": "INSUFFICIENT_FUNDS",
+    "ground_truth_action": "RETRY_LATER",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": true
+  },
+  "synth_case_0112": {
+    "case_id": "synth_case_0112",
+    "ground_truth_category": "INSUFFICIENT_FUNDS",
+    "ground_truth_action": "RETRY_LATER",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": true
+  },
+  "synth_case_0113": {
+    "case_id": "synth_case_0113",
+    "ground_truth_category": "EXPIRED_PAYMENT_METHOD",
+    "ground_truth_action": "PAYMENT_METHOD_RECOVERY",
+    "ground_truth_should_contact": true,
+    "ground_truth_recoverable": true
+  },
+  "synth_case_0114": {
+    "case_id": "synth_case_0114",
+    "ground_truth_category": "REPEATED_DECLINE",
+    "ground_truth_action": "HUMAN_ESCALATION",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": false
+  },
+  "synth_case_0115": {
+    "case_id": "synth_case_0115",
+    "ground_truth_category": "TRANSIENT_TECHNICAL_FAILURE",
+    "ground_truth_action": "RETRY_LATER",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": true
+  },
+  "synth_case_0116": {
+    "case_id": "synth_case_0116",
+    "ground_truth_category": "REPEATED_DECLINE",
+    "ground_truth_action": "HUMAN_ESCALATION",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": false
+  },
+  "synth_case_0117": {
+    "case_id": "synth_case_0117",
+    "ground_truth_category": "RETRY_BUDGET_EXHAUSTED",
+    "ground_truth_action": "HUMAN_ESCALATION",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": false
+  },
+  "synth_case_0118": {
+    "case_id": "synth_case_0118",
+    "ground_truth_category": "SUCCESSFUL_RETRY",
+    "ground_truth_action": "RETRY_LATER",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": true
+  },
+  "synth_case_0119": {
+    "case_id": "synth_case_0119",
+    "ground_truth_category": "INSUFFICIENT_FUNDS",
+    "ground_truth_action": "RETRY_LATER",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": true
+  },
+  "synth_case_0120": {
+    "case_id": "synth_case_0120",
+    "ground_truth_category": "UNKNOWN_OR_UNRESOLVED",
+    "ground_truth_action": "HUMAN_ESCALATION",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": false
+  },
+  "synth_case_0121": {
+    "case_id": "synth_case_0121",
+    "ground_truth_category": "INSUFFICIENT_FUNDS",
+    "ground_truth_action": "RETRY_LATER",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": true
+  },
+  "synth_case_0122": {
+    "case_id": "synth_case_0122",
+    "ground_truth_category": "TRANSIENT_TECHNICAL_FAILURE",
+    "ground_truth_action": "RETRY_LATER",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": true
+  },
+  "synth_case_0123": {
+    "case_id": "synth_case_0123",
+    "ground_truth_category": "INSUFFICIENT_FUNDS",
+    "ground_truth_action": "RETRY_LATER",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": true
+  },
+  "synth_case_0124": {
+    "case_id": "synth_case_0124",
+    "ground_truth_category": "TRANSIENT_TECHNICAL_FAILURE",
+    "ground_truth_action": "RETRY_LATER",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": true
+  },
+  "synth_case_0125": {
+    "case_id": "synth_case_0125",
+    "ground_truth_category": "REPEATED_DECLINE",
+    "ground_truth_action": "HUMAN_ESCALATION",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": false
+  },
+  "synth_case_0126": {
+    "case_id": "synth_case_0126",
+    "ground_truth_category": "UNKNOWN_OR_UNRESOLVED",
+    "ground_truth_action": "HUMAN_ESCALATION",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": false
+  },
+  "synth_case_0127": {
+    "case_id": "synth_case_0127",
+    "ground_truth_category": "TRANSIENT_TECHNICAL_FAILURE",
+    "ground_truth_action": "RETRY_LATER",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": true
+  },
+  "synth_case_0128": {
+    "case_id": "synth_case_0128",
+    "ground_truth_category": "SUCCESSFUL_RETRY",
+    "ground_truth_action": "RETRY_LATER",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": true
+  },
+  "synth_case_0129": {
+    "case_id": "synth_case_0129",
+    "ground_truth_category": "SUCCESSFUL_RETRY",
+    "ground_truth_action": "RETRY_LATER",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": true
+  },
+  "synth_case_0130": {
+    "case_id": "synth_case_0130",
+    "ground_truth_category": "TRANSIENT_TECHNICAL_FAILURE",
+    "ground_truth_action": "RETRY_LATER",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": true
+  },
+  "synth_case_0131": {
+    "case_id": "synth_case_0131",
+    "ground_truth_category": "REPEATED_DECLINE",
+    "ground_truth_action": "HUMAN_ESCALATION",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": false
+  },
+  "synth_case_0132": {
+    "case_id": "synth_case_0132",
+    "ground_truth_category": "RETRY_BUDGET_EXHAUSTED",
+    "ground_truth_action": "HUMAN_ESCALATION",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": false
+  },
+  "synth_case_0133": {
+    "case_id": "synth_case_0133",
+    "ground_truth_category": "REPEATED_DECLINE",
+    "ground_truth_action": "HUMAN_ESCALATION",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": false
+  },
+  "synth_case_0134": {
+    "case_id": "synth_case_0134",
+    "ground_truth_category": "SUCCESSFUL_RETRY",
+    "ground_truth_action": "RETRY_LATER",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": true
+  },
+  "synth_case_0135": {
+    "case_id": "synth_case_0135",
+    "ground_truth_category": "EXPIRED_PAYMENT_METHOD",
+    "ground_truth_action": "PAYMENT_METHOD_RECOVERY",
+    "ground_truth_should_contact": true,
+    "ground_truth_recoverable": true
+  },
+  "synth_case_0136": {
+    "case_id": "synth_case_0136",
+    "ground_truth_category": "REPEATED_DECLINE",
+    "ground_truth_action": "HUMAN_ESCALATION",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": false
+  },
+  "synth_case_0137": {
+    "case_id": "synth_case_0137",
+    "ground_truth_category": "TRANSIENT_TECHNICAL_FAILURE",
+    "ground_truth_action": "RETRY_LATER",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": true
+  },
+  "synth_case_0138": {
+    "case_id": "synth_case_0138",
+    "ground_truth_category": "SUCCESSFUL_RETRY",
+    "ground_truth_action": "RETRY_LATER",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": true
+  },
+  "synth_case_0139": {
+    "case_id": "synth_case_0139",
+    "ground_truth_category": "DUPLICATE_EVENT",
+    "ground_truth_action": "STOP",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": false
+  },
+  "synth_case_0140": {
+    "case_id": "synth_case_0140",
+    "ground_truth_category": "RETRY_BUDGET_EXHAUSTED",
+    "ground_truth_action": "HUMAN_ESCALATION",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": false
+  },
+  "synth_case_0141": {
+    "case_id": "synth_case_0141",
+    "ground_truth_category": "INSUFFICIENT_FUNDS",
+    "ground_truth_action": "RETRY_LATER",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": true
+  },
+  "synth_case_0142": {
+    "case_id": "synth_case_0142",
+    "ground_truth_category": "SUCCESSFUL_RETRY",
+    "ground_truth_action": "RETRY_LATER",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": true
+  },
+  "synth_case_0143": {
+    "case_id": "synth_case_0143",
+    "ground_truth_category": "TRANSIENT_TECHNICAL_FAILURE",
+    "ground_truth_action": "RETRY_LATER",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": true
+  },
+  "synth_case_0144": {
+    "case_id": "synth_case_0144",
+    "ground_truth_category": "SUCCESSFUL_RETRY",
+    "ground_truth_action": "RETRY_LATER",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": true
+  },
+  "synth_case_0145": {
+    "case_id": "synth_case_0145",
+    "ground_truth_category": "REPEATED_DECLINE",
+    "ground_truth_action": "HUMAN_ESCALATION",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": false
+  },
+  "synth_case_0146": {
+    "case_id": "synth_case_0146",
+    "ground_truth_category": "DUPLICATE_EVENT",
+    "ground_truth_action": "STOP",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": false
+  },
+  "synth_case_0147": {
+    "case_id": "synth_case_0147",
+    "ground_truth_category": "REPEATED_DECLINE",
+    "ground_truth_action": "HUMAN_ESCALATION",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": false
+  },
+  "synth_case_0148": {
+    "case_id": "synth_case_0148",
+    "ground_truth_category": "INSUFFICIENT_FUNDS",
+    "ground_truth_action": "RETRY_LATER",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": true
+  },
+  "synth_case_0149": {
+    "case_id": "synth_case_0149",
+    "ground_truth_category": "REPEATED_DECLINE",
+    "ground_truth_action": "HUMAN_ESCALATION",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": false
+  },
+  "synth_case_0150": {
+    "case_id": "synth_case_0150",
+    "ground_truth_category": "REPEATED_DECLINE",
+    "ground_truth_action": "HUMAN_ESCALATION",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": false
+  },
+  "synth_case_0151": {
+    "case_id": "synth_case_0151",
+    "ground_truth_category": "RETRY_BUDGET_EXHAUSTED",
+    "ground_truth_action": "HUMAN_ESCALATION",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": false
+  },
+  "synth_case_0152": {
+    "case_id": "synth_case_0152",
+    "ground_truth_category": "RETRY_BUDGET_EXHAUSTED",
+    "ground_truth_action": "HUMAN_ESCALATION",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": false
+  },
+  "synth_case_0153": {
+    "case_id": "synth_case_0153",
+    "ground_truth_category": "REPEATED_DECLINE",
+    "ground_truth_action": "HUMAN_ESCALATION",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": false
+  },
+  "synth_case_0154": {
+    "case_id": "synth_case_0154",
+    "ground_truth_category": "TRANSIENT_TECHNICAL_FAILURE",
+    "ground_truth_action": "RETRY_LATER",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": true
+  },
+  "synth_case_0155": {
+    "case_id": "synth_case_0155",
+    "ground_truth_category": "TRANSIENT_TECHNICAL_FAILURE",
+    "ground_truth_action": "RETRY_LATER",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": true
+  },
+  "synth_case_0156": {
+    "case_id": "synth_case_0156",
+    "ground_truth_category": "UNKNOWN_OR_UNRESOLVED",
+    "ground_truth_action": "HUMAN_ESCALATION",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": false
+  },
+  "synth_case_0157": {
+    "case_id": "synth_case_0157",
+    "ground_truth_category": "TRANSIENT_TECHNICAL_FAILURE",
+    "ground_truth_action": "RETRY_LATER",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": true
+  },
+  "synth_case_0158": {
+    "case_id": "synth_case_0158",
+    "ground_truth_category": "INSUFFICIENT_FUNDS",
+    "ground_truth_action": "RETRY_LATER",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": true
+  },
+  "synth_case_0159": {
+    "case_id": "synth_case_0159",
+    "ground_truth_category": "EXPIRED_PAYMENT_METHOD",
+    "ground_truth_action": "PAYMENT_METHOD_RECOVERY",
+    "ground_truth_should_contact": true,
+    "ground_truth_recoverable": true
+  },
+  "synth_case_0160": {
+    "case_id": "synth_case_0160",
+    "ground_truth_category": "INSUFFICIENT_FUNDS",
+    "ground_truth_action": "RETRY_LATER",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": true
+  },
+  "synth_case_0161": {
+    "case_id": "synth_case_0161",
+    "ground_truth_category": "MANDATE_OR_CUSTOMER_ACTION_REQUIRED",
+    "ground_truth_action": "PAYMENT_METHOD_RECOVERY",
+    "ground_truth_should_contact": true,
+    "ground_truth_recoverable": false
+  },
+  "synth_case_0162": {
+    "case_id": "synth_case_0162",
+    "ground_truth_category": "EXPIRED_PAYMENT_METHOD",
+    "ground_truth_action": "PAYMENT_METHOD_RECOVERY",
+    "ground_truth_should_contact": true,
+    "ground_truth_recoverable": true
+  },
+  "synth_case_0163": {
+    "case_id": "synth_case_0163",
+    "ground_truth_category": "INSUFFICIENT_FUNDS",
+    "ground_truth_action": "RETRY_LATER",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": true
+  },
+  "synth_case_0164": {
+    "case_id": "synth_case_0164",
+    "ground_truth_category": "INSUFFICIENT_FUNDS",
+    "ground_truth_action": "RETRY_LATER",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": true
+  },
+  "synth_case_0165": {
+    "case_id": "synth_case_0165",
+    "ground_truth_category": "RETRY_BUDGET_EXHAUSTED",
+    "ground_truth_action": "HUMAN_ESCALATION",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": false
+  },
+  "synth_case_0166": {
+    "case_id": "synth_case_0166",
+    "ground_truth_category": "MANDATE_OR_CUSTOMER_ACTION_REQUIRED",
+    "ground_truth_action": "PAYMENT_METHOD_RECOVERY",
+    "ground_truth_should_contact": true,
+    "ground_truth_recoverable": false
+  },
+  "synth_case_0167": {
+    "case_id": "synth_case_0167",
+    "ground_truth_category": "RETRY_BUDGET_EXHAUSTED",
+    "ground_truth_action": "HUMAN_ESCALATION",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": false
+  },
+  "synth_case_0168": {
+    "case_id": "synth_case_0168",
+    "ground_truth_category": "DUPLICATE_EVENT",
+    "ground_truth_action": "STOP",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": false
+  },
+  "synth_case_0169": {
+    "case_id": "synth_case_0169",
+    "ground_truth_category": "EXPIRED_PAYMENT_METHOD",
+    "ground_truth_action": "PAYMENT_METHOD_RECOVERY",
+    "ground_truth_should_contact": true,
+    "ground_truth_recoverable": true
+  },
+  "synth_case_0170": {
+    "case_id": "synth_case_0170",
+    "ground_truth_category": "TRANSIENT_TECHNICAL_FAILURE",
+    "ground_truth_action": "RETRY_LATER",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": true
+  },
+  "synth_case_0171": {
+    "case_id": "synth_case_0171",
+    "ground_truth_category": "REPEATED_DECLINE",
+    "ground_truth_action": "HUMAN_ESCALATION",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": false
+  },
+  "synth_case_0172": {
+    "case_id": "synth_case_0172",
+    "ground_truth_category": "DUPLICATE_EVENT",
+    "ground_truth_action": "STOP",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": false
+  },
+  "synth_case_0173": {
+    "case_id": "synth_case_0173",
+    "ground_truth_category": "RETRY_BUDGET_EXHAUSTED",
+    "ground_truth_action": "HUMAN_ESCALATION",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": false
+  },
+  "synth_case_0174": {
+    "case_id": "synth_case_0174",
+    "ground_truth_category": "REPEATED_DECLINE",
+    "ground_truth_action": "HUMAN_ESCALATION",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": false
+  },
+  "synth_case_0175": {
+    "case_id": "synth_case_0175",
+    "ground_truth_category": "EXPIRED_PAYMENT_METHOD",
+    "ground_truth_action": "PAYMENT_METHOD_RECOVERY",
+    "ground_truth_should_contact": true,
+    "ground_truth_recoverable": true
+  },
+  "synth_case_0176": {
+    "case_id": "synth_case_0176",
+    "ground_truth_category": "REPEATED_DECLINE",
+    "ground_truth_action": "HUMAN_ESCALATION",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": false
+  },
+  "synth_case_0177": {
+    "case_id": "synth_case_0177",
+    "ground_truth_category": "INSUFFICIENT_FUNDS",
+    "ground_truth_action": "RETRY_LATER",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": true
+  },
+  "synth_case_0178": {
+    "case_id": "synth_case_0178",
+    "ground_truth_category": "EXPIRED_PAYMENT_METHOD",
+    "ground_truth_action": "PAYMENT_METHOD_RECOVERY",
+    "ground_truth_should_contact": true,
+    "ground_truth_recoverable": true
+  },
+  "synth_case_0179": {
+    "case_id": "synth_case_0179",
+    "ground_truth_category": "RETRY_BUDGET_EXHAUSTED",
+    "ground_truth_action": "HUMAN_ESCALATION",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": false
+  },
+  "synth_case_0180": {
+    "case_id": "synth_case_0180",
+    "ground_truth_category": "EXPIRED_PAYMENT_METHOD",
+    "ground_truth_action": "PAYMENT_METHOD_RECOVERY",
+    "ground_truth_should_contact": true,
+    "ground_truth_recoverable": true
+  },
+  "synth_case_0181": {
+    "case_id": "synth_case_0181",
+    "ground_truth_category": "RETRY_BUDGET_EXHAUSTED",
+    "ground_truth_action": "HUMAN_ESCALATION",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": false
+  },
+  "synth_case_0182": {
+    "case_id": "synth_case_0182",
+    "ground_truth_category": "INSUFFICIENT_FUNDS",
+    "ground_truth_action": "RETRY_LATER",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": true
+  },
+  "synth_case_0183": {
+    "case_id": "synth_case_0183",
+    "ground_truth_category": "INSUFFICIENT_FUNDS",
+    "ground_truth_action": "RETRY_LATER",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": true
+  },
+  "synth_case_0184": {
+    "case_id": "synth_case_0184",
+    "ground_truth_category": "MANDATE_OR_CUSTOMER_ACTION_REQUIRED",
+    "ground_truth_action": "PAYMENT_METHOD_RECOVERY",
+    "ground_truth_should_contact": true,
+    "ground_truth_recoverable": false
+  },
+  "synth_case_0185": {
+    "case_id": "synth_case_0185",
+    "ground_truth_category": "INSUFFICIENT_FUNDS",
+    "ground_truth_action": "RETRY_LATER",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": true
+  },
+  "synth_case_0186": {
+    "case_id": "synth_case_0186",
+    "ground_truth_category": "EXPIRED_PAYMENT_METHOD",
+    "ground_truth_action": "PAYMENT_METHOD_RECOVERY",
+    "ground_truth_should_contact": true,
+    "ground_truth_recoverable": true
+  },
+  "synth_case_0187": {
+    "case_id": "synth_case_0187",
+    "ground_truth_category": "INSUFFICIENT_FUNDS",
+    "ground_truth_action": "RETRY_LATER",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": true
+  },
+  "synth_case_0188": {
+    "case_id": "synth_case_0188",
+    "ground_truth_category": "REPEATED_DECLINE",
+    "ground_truth_action": "HUMAN_ESCALATION",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": false
+  },
+  "synth_case_0189": {
+    "case_id": "synth_case_0189",
+    "ground_truth_category": "UNKNOWN_OR_UNRESOLVED",
+    "ground_truth_action": "HUMAN_ESCALATION",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": false
+  },
+  "synth_case_0190": {
+    "case_id": "synth_case_0190",
+    "ground_truth_category": "SUCCESSFUL_RETRY",
+    "ground_truth_action": "RETRY_LATER",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": true
+  },
+  "synth_case_0191": {
+    "case_id": "synth_case_0191",
+    "ground_truth_category": "TRANSIENT_TECHNICAL_FAILURE",
+    "ground_truth_action": "RETRY_LATER",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": true
+  },
+  "synth_case_0192": {
+    "case_id": "synth_case_0192",
+    "ground_truth_category": "DUPLICATE_EVENT",
+    "ground_truth_action": "STOP",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": false
+  },
+  "synth_case_0193": {
+    "case_id": "synth_case_0193",
+    "ground_truth_category": "REPEATED_DECLINE",
+    "ground_truth_action": "HUMAN_ESCALATION",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": false
+  },
+  "synth_case_0194": {
+    "case_id": "synth_case_0194",
+    "ground_truth_category": "EXPIRED_PAYMENT_METHOD",
+    "ground_truth_action": "PAYMENT_METHOD_RECOVERY",
+    "ground_truth_should_contact": true,
+    "ground_truth_recoverable": true
+  },
+  "synth_case_0195": {
+    "case_id": "synth_case_0195",
+    "ground_truth_category": "REPEATED_DECLINE",
+    "ground_truth_action": "HUMAN_ESCALATION",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": false
+  },
+  "synth_case_0196": {
+    "case_id": "synth_case_0196",
+    "ground_truth_category": "INSUFFICIENT_FUNDS",
+    "ground_truth_action": "RETRY_LATER",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": true
+  },
+  "synth_case_0197": {
+    "case_id": "synth_case_0197",
+    "ground_truth_category": "REPEATED_DECLINE",
+    "ground_truth_action": "HUMAN_ESCALATION",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": false
+  },
+  "synth_case_0198": {
+    "case_id": "synth_case_0198",
+    "ground_truth_category": "TRANSIENT_TECHNICAL_FAILURE",
+    "ground_truth_action": "RETRY_LATER",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": true
+  },
+  "synth_case_0199": {
+    "case_id": "synth_case_0199",
+    "ground_truth_category": "REPEATED_DECLINE",
+    "ground_truth_action": "HUMAN_ESCALATION",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": false
+  },
+  "synth_case_0200": {
+    "case_id": "synth_case_0200",
+    "ground_truth_category": "REPEATED_DECLINE",
+    "ground_truth_action": "HUMAN_ESCALATION",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": false
+  },
+  "synth_case_0201": {
+    "case_id": "synth_case_0201",
+    "ground_truth_category": "INSUFFICIENT_FUNDS",
+    "ground_truth_action": "RETRY_LATER",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": true
+  },
+  "synth_case_0202": {
+    "case_id": "synth_case_0202",
+    "ground_truth_category": "INSUFFICIENT_FUNDS",
+    "ground_truth_action": "RETRY_LATER",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": true
+  },
+  "synth_case_0203": {
+    "case_id": "synth_case_0203",
+    "ground_truth_category": "INSUFFICIENT_FUNDS",
+    "ground_truth_action": "RETRY_LATER",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": true
+  },
+  "synth_case_0204": {
+    "case_id": "synth_case_0204",
+    "ground_truth_category": "DUPLICATE_EVENT",
+    "ground_truth_action": "STOP",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": false
+  },
+  "synth_case_0205": {
+    "case_id": "synth_case_0205",
+    "ground_truth_category": "REPEATED_DECLINE",
+    "ground_truth_action": "HUMAN_ESCALATION",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": false
+  },
+  "synth_case_0206": {
+    "case_id": "synth_case_0206",
+    "ground_truth_category": "INSUFFICIENT_FUNDS",
+    "ground_truth_action": "RETRY_LATER",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": true
+  },
+  "synth_case_0207": {
+    "case_id": "synth_case_0207",
+    "ground_truth_category": "SUCCESSFUL_RETRY",
+    "ground_truth_action": "RETRY_LATER",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": true
+  },
+  "synth_case_0208": {
+    "case_id": "synth_case_0208",
+    "ground_truth_category": "REPEATED_DECLINE",
+    "ground_truth_action": "HUMAN_ESCALATION",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": false
+  },
+  "synth_case_0209": {
+    "case_id": "synth_case_0209",
+    "ground_truth_category": "SUCCESSFUL_RETRY",
+    "ground_truth_action": "RETRY_LATER",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": true
+  },
+  "synth_case_0210": {
+    "case_id": "synth_case_0210",
+    "ground_truth_category": "INSUFFICIENT_FUNDS",
+    "ground_truth_action": "RETRY_LATER",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": true
+  },
+  "synth_case_0211": {
+    "case_id": "synth_case_0211",
+    "ground_truth_category": "INSUFFICIENT_FUNDS",
+    "ground_truth_action": "RETRY_LATER",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": true
+  },
+  "synth_case_0212": {
+    "case_id": "synth_case_0212",
+    "ground_truth_category": "MANDATE_OR_CUSTOMER_ACTION_REQUIRED",
+    "ground_truth_action": "PAYMENT_METHOD_RECOVERY",
+    "ground_truth_should_contact": true,
+    "ground_truth_recoverable": false
+  },
+  "synth_case_0213": {
+    "case_id": "synth_case_0213",
+    "ground_truth_category": "MANDATE_OR_CUSTOMER_ACTION_REQUIRED",
+    "ground_truth_action": "PAYMENT_METHOD_RECOVERY",
+    "ground_truth_should_contact": true,
+    "ground_truth_recoverable": false
+  },
+  "synth_case_0214": {
+    "case_id": "synth_case_0214",
+    "ground_truth_category": "DUPLICATE_EVENT",
+    "ground_truth_action": "STOP",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": false
+  },
+  "synth_case_0215": {
+    "case_id": "synth_case_0215",
+    "ground_truth_category": "REPEATED_DECLINE",
+    "ground_truth_action": "HUMAN_ESCALATION",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": false
+  },
+  "synth_case_0216": {
+    "case_id": "synth_case_0216",
+    "ground_truth_category": "SUCCESSFUL_RETRY",
+    "ground_truth_action": "RETRY_LATER",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": true
+  },
+  "synth_case_0217": {
+    "case_id": "synth_case_0217",
+    "ground_truth_category": "INSUFFICIENT_FUNDS",
+    "ground_truth_action": "RETRY_LATER",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": true
+  },
+  "synth_case_0218": {
+    "case_id": "synth_case_0218",
+    "ground_truth_category": "RETRY_BUDGET_EXHAUSTED",
+    "ground_truth_action": "HUMAN_ESCALATION",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": false
+  },
+  "synth_case_0219": {
+    "case_id": "synth_case_0219",
+    "ground_truth_category": "REPEATED_DECLINE",
+    "ground_truth_action": "HUMAN_ESCALATION",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": false
+  },
+  "synth_case_0220": {
+    "case_id": "synth_case_0220",
+    "ground_truth_category": "TRANSIENT_TECHNICAL_FAILURE",
+    "ground_truth_action": "RETRY_LATER",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": true
+  },
+  "synth_case_0221": {
+    "case_id": "synth_case_0221",
+    "ground_truth_category": "SUCCESSFUL_RETRY",
+    "ground_truth_action": "RETRY_LATER",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": true
+  },
+  "synth_case_0222": {
+    "case_id": "synth_case_0222",
+    "ground_truth_category": "REPEATED_DECLINE",
+    "ground_truth_action": "HUMAN_ESCALATION",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": false
+  },
+  "synth_case_0223": {
+    "case_id": "synth_case_0223",
+    "ground_truth_category": "SUCCESSFUL_RETRY",
+    "ground_truth_action": "RETRY_LATER",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": true
+  },
+  "synth_case_0224": {
+    "case_id": "synth_case_0224",
+    "ground_truth_category": "RETRY_BUDGET_EXHAUSTED",
+    "ground_truth_action": "HUMAN_ESCALATION",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": false
+  },
+  "synth_case_0225": {
+    "case_id": "synth_case_0225",
+    "ground_truth_category": "INSUFFICIENT_FUNDS",
+    "ground_truth_action": "RETRY_LATER",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": true
+  },
+  "synth_case_0226": {
+    "case_id": "synth_case_0226",
+    "ground_truth_category": "UNKNOWN_OR_UNRESOLVED",
+    "ground_truth_action": "HUMAN_ESCALATION",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": false
+  },
+  "synth_case_0227": {
+    "case_id": "synth_case_0227",
+    "ground_truth_category": "UNKNOWN_OR_UNRESOLVED",
+    "ground_truth_action": "HUMAN_ESCALATION",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": false
+  },
+  "synth_case_0228": {
+    "case_id": "synth_case_0228",
+    "ground_truth_category": "EXPIRED_PAYMENT_METHOD",
+    "ground_truth_action": "PAYMENT_METHOD_RECOVERY",
+    "ground_truth_should_contact": true,
+    "ground_truth_recoverable": true
+  },
+  "synth_case_0229": {
+    "case_id": "synth_case_0229",
+    "ground_truth_category": "UNKNOWN_OR_UNRESOLVED",
+    "ground_truth_action": "HUMAN_ESCALATION",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": false
+  },
+  "synth_case_0230": {
+    "case_id": "synth_case_0230",
+    "ground_truth_category": "INSUFFICIENT_FUNDS",
+    "ground_truth_action": "RETRY_LATER",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": true
+  },
+  "synth_case_0231": {
+    "case_id": "synth_case_0231",
+    "ground_truth_category": "REPEATED_DECLINE",
+    "ground_truth_action": "HUMAN_ESCALATION",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": false
+  },
+  "synth_case_0232": {
+    "case_id": "synth_case_0232",
+    "ground_truth_category": "TRANSIENT_TECHNICAL_FAILURE",
+    "ground_truth_action": "RETRY_LATER",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": true
+  },
+  "synth_case_0233": {
+    "case_id": "synth_case_0233",
+    "ground_truth_category": "SUCCESSFUL_RETRY",
+    "ground_truth_action": "RETRY_LATER",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": true
+  },
+  "synth_case_0234": {
+    "case_id": "synth_case_0234",
+    "ground_truth_category": "TRANSIENT_TECHNICAL_FAILURE",
+    "ground_truth_action": "RETRY_LATER",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": true
+  },
+  "synth_case_0235": {
+    "case_id": "synth_case_0235",
+    "ground_truth_category": "TRANSIENT_TECHNICAL_FAILURE",
+    "ground_truth_action": "RETRY_LATER",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": true
+  },
+  "synth_case_0236": {
+    "case_id": "synth_case_0236",
+    "ground_truth_category": "TRANSIENT_TECHNICAL_FAILURE",
+    "ground_truth_action": "RETRY_LATER",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": true
+  },
+  "synth_case_0237": {
+    "case_id": "synth_case_0237",
+    "ground_truth_category": "INSUFFICIENT_FUNDS",
+    "ground_truth_action": "RETRY_LATER",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": true
+  },
+  "synth_case_0238": {
+    "case_id": "synth_case_0238",
+    "ground_truth_category": "EXPIRED_PAYMENT_METHOD",
+    "ground_truth_action": "PAYMENT_METHOD_RECOVERY",
+    "ground_truth_should_contact": true,
+    "ground_truth_recoverable": true
+  },
+  "synth_case_0239": {
+    "case_id": "synth_case_0239",
+    "ground_truth_category": "TRANSIENT_TECHNICAL_FAILURE",
+    "ground_truth_action": "RETRY_LATER",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": true
+  },
+  "synth_case_0240": {
+    "case_id": "synth_case_0240",
+    "ground_truth_category": "INSUFFICIENT_FUNDS",
+    "ground_truth_action": "RETRY_LATER",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": true
+  },
+  "synth_case_0241": {
+    "case_id": "synth_case_0241",
+    "ground_truth_category": "INSUFFICIENT_FUNDS",
+    "ground_truth_action": "RETRY_LATER",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": true
+  },
+  "synth_case_0242": {
+    "case_id": "synth_case_0242",
+    "ground_truth_category": "TRANSIENT_TECHNICAL_FAILURE",
+    "ground_truth_action": "RETRY_LATER",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": true
+  },
+  "synth_case_0243": {
+    "case_id": "synth_case_0243",
+    "ground_truth_category": "TRANSIENT_TECHNICAL_FAILURE",
+    "ground_truth_action": "RETRY_LATER",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": true
+  },
+  "synth_case_0244": {
+    "case_id": "synth_case_0244",
+    "ground_truth_category": "TRANSIENT_TECHNICAL_FAILURE",
+    "ground_truth_action": "RETRY_LATER",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": true
+  },
+  "synth_case_0245": {
+    "case_id": "synth_case_0245",
+    "ground_truth_category": "REPEATED_DECLINE",
+    "ground_truth_action": "HUMAN_ESCALATION",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": false
+  },
+  "synth_case_0246": {
+    "case_id": "synth_case_0246",
+    "ground_truth_category": "EXPIRED_PAYMENT_METHOD",
+    "ground_truth_action": "PAYMENT_METHOD_RECOVERY",
+    "ground_truth_should_contact": true,
+    "ground_truth_recoverable": true
+  },
+  "synth_case_0247": {
+    "case_id": "synth_case_0247",
+    "ground_truth_category": "SUCCESSFUL_RETRY",
+    "ground_truth_action": "RETRY_LATER",
+    "ground_truth_should_contact": false,
+    "ground_truth_recoverable": true
+  },
+  "synth_case_0248": {
+    "case_id": "synth_case_0248",
+    "ground_truth_category": "EXPIRED_PAYMENT_METHOD",
+    "ground_truth_action": "PAYMENT_METHOD_RECOVERY",
+    "ground_truth_should_contact": true,
+    "ground_truth_recoverable": true
+  },
+  "synth_case_0249": {
+    "case_id": "synth_case_0249",
+    "ground_truth_category": "EXPIRED_PAYMENT_METHOD",
+    "ground_truth_action": "PAYMENT_METHOD_RECOVERY",
+    "ground_truth_should_contact": true,
+    "ground_truth_recoverable": true
+  },
+  "synth_case_0250": {
+    "case_id": "synth_case_0250",
+    "ground_truth_category": "EXPIRED_PAYMENT_METHOD",
+    "ground_truth_action": "PAYMENT_METHOD_RECOVERY",
+    "ground_truth_should_contact": true,
+    "ground_truth_recoverable": true
+  }
+}

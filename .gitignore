@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+
+# Database & Storage
+*.db
+*.sqlite
+*.sqlite3
+recoverai.db
+
+# Testing & Coverage
+.pytest_cache/
+.coverage
+htmlcov/
+.env
+
+# Node / Frontend
+node_modules/
+.next/
+dist/
+build/
