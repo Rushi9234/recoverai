@@ -1,8 +1,17 @@
-const API_BASE = "http://localhost:8000/api";
+const getApiBase = () => {
+  if (typeof window !== "undefined") {
+    // In browser: use relative /api endpoint on production or localhost:8000 in dev if needed
+    if (window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1") {
+      return "http://localhost:8000/api";
+    }
+    return "/api";
+  }
+  return "http://localhost:8000/api";
+};
 
 export async function fetchApi<T = any>(endpoint: string, options: RequestInit = {}): Promise<T> {
   const cleanEndpoint = endpoint.startsWith("/") ? endpoint : `/${endpoint}`;
-  const url = `${API_BASE}${cleanEndpoint}`;
+  const url = `${getApiBase()}${cleanEndpoint}`;
   
   const res = await fetch(url, {
     ...options,
