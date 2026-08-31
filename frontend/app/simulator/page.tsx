@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from "react";
 import { formatCurrency, fetchApi } from "@/lib/api";
 import { TagBadge } from "@/components/TagBadge";
-import { Play, Sliders, TrendingUp, ShieldCheck, RefreshCw, AlertTriangle, CheckCircle2, Zap } from "lucide-react";
+import { Play, Sliders, TrendingUp, ShieldCheck, RefreshCw, AlertTriangle, CheckCircle2, Zap, Info } from "lucide-react";
 import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, CartesianGrid } from "recharts";
 
 export default function RecoverySimulator() {
@@ -34,27 +34,30 @@ export default function RecoverySimulator() {
   const getStrategyMetrics = (strategy: string) => {
     if (strategy === "AI_RECOMMENDED") {
       return {
-        tag: "BEST BALANCE",
-        tagColor: "bg-blue-950 text-blue-400 border-blue-800",
+        tag: "BEST RISK-ADJUSTED BALANCE",
+        tagColor: "bg-blue-950 text-blue-400 border-blue-800 font-bold",
         riskLevel: "LOW RISK",
-        riskColor: "text-emerald-400",
-        note: "Optimizes recovery rate while respecting 100% of policy guardrails."
+        riskColor: "text-emerald-400 font-bold",
+        explanation: "RecoverAI optimizes expected recovery within merchant-defined safety constraints rather than maximizing attempts.",
+        frictionNote: "Balanced outreach & 0% policy violations."
       };
     } else if (strategy === "CONSERVATIVE") {
       return {
-        tag: "LOW OUTREACH",
+        tag: "LOW INTERVENTION",
         tagColor: "bg-gray-800 text-gray-300 border-gray-700",
         riskLevel: "MINIMAL RISK",
-        riskColor: "text-emerald-400",
-        note: "Minimizes customer contact but misses valid transient recovery opportunities."
+        riskColor: "text-emerald-400 font-bold",
+        explanation: "Lower intervention volume; may leave recoverable revenue untouched.",
+        frictionNote: "Lowest customer contact frequency."
       };
     } else if (strategy === "AGGRESSIVE") {
       return {
-        tag: "HIGH RECOVERY / HIGH RISK",
-        tagColor: "bg-amber-950 text-amber-400 border-amber-800",
-        riskLevel: "HIGH OPERATIONAL RISK",
-        riskColor: "text-amber-400",
-        note: "Higher projected recovery comes with +118% more contacts and higher customer friction risk."
+        tag: "HIGHER PROJECTED RECOVERY",
+        tagColor: "bg-amber-950 text-amber-400 border-amber-800 font-bold",
+        riskLevel: "HIGHER OPERATIONAL RISK",
+        riskColor: "text-amber-400 font-bold",
+        explanation: "Higher projected recovery comes with +118% more contacts, higher action volume, and increased customer friction.",
+        frictionNote: "+118% contacts, higher friction."
       };
     } else {
       return {
@@ -62,7 +65,8 @@ export default function RecoverySimulator() {
         tagColor: "bg-gray-800 text-gray-300 border-gray-700",
         riskLevel: "MODERATE RISK",
         riskColor: "text-gray-300",
-        note: "Static rule application without failure diagnosis context."
+        explanation: "Baseline policy without contextual AI strategy optimization.",
+        frictionNote: "Static schedule without diagnosis."
       };
     }
   };
@@ -92,14 +96,14 @@ export default function RecoverySimulator() {
           return (
             <div key={r.strategy} className={`p-5 bg-[#111827] border rounded-xl space-y-3 relative ${isBest ? "border-blue-700/80 shadow-xl shadow-blue-950/30" : "border-gray-800"}`}>
               {isBest && (
-                <span className="absolute -top-3 right-4 px-2 py-0.5 text-[9px] font-mono font-bold bg-blue-600 text-white rounded-full shadow">
+                <span className="absolute -top-3 right-4 px-2.5 py-0.5 text-[9px] font-mono font-bold bg-blue-600 text-white rounded-full shadow">
                   ★ RECOMMENDED
                 </span>
               )}
 
               <div className="flex items-center justify-between">
                 <span className="text-xs font-mono font-bold text-blue-400">{r.strategy}</span>
-                <span className={`px-2 py-0.5 text-[9px] font-mono font-bold rounded border ${meta.tagColor}`}>
+                <span className={`px-2 py-0.5 text-[9px] font-mono rounded border ${meta.tagColor}`}>
                   {meta.tag}
                 </span>
               </div>
@@ -130,12 +134,12 @@ export default function RecoverySimulator() {
                 </div>
                 <div className="flex justify-between">
                   <span className="text-gray-400">Operational Risk:</span>
-                  <span className={`font-bold ${meta.riskColor}`}>{meta.riskLevel}</span>
+                  <span className={meta.riskColor}>{meta.riskLevel}</span>
                 </div>
               </div>
 
-              <p className="text-[10px] text-gray-400 font-sans italic pt-1 border-t border-gray-800/60">
-                {meta.note}
+              <p className="text-[10px] text-gray-400 font-sans italic pt-2 border-t border-gray-800/60 leading-relaxed">
+                {meta.explanation}
               </p>
             </div>
           );
@@ -145,8 +149,11 @@ export default function RecoverySimulator() {
       {/* Comparison Chart */}
       <div className="p-6 bg-[#111827] border border-gray-800 rounded-xl space-y-4">
         <div className="flex items-center justify-between">
-          <h3 className="text-sm font-bold font-mono text-gray-200">STRATEGY RECOVERY PROJECTIONS COMPARISON</h3>
-          <TagBadge tag="PROJECTED" />
+          <div className="flex items-center space-x-2">
+            <h3 className="text-sm font-bold font-mono text-gray-200">STRATEGY RECOVERY PROJECTIONS COMPARISON</h3>
+            <TagBadge tag="PROJECTED" />
+          </div>
+          <span className="text-xs text-gray-400 font-mono">RecoverAI optimizes recovery within safety constraints.</span>
         </div>
         <div className="h-64 w-full">
           <ResponsiveContainer width="100%" height="100%">

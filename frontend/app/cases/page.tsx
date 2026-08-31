@@ -34,18 +34,18 @@ export default function RiskQueue() {
     loadCases();
   }, [priorityFilter, statusFilter, search]);
 
-  const getCaseSubReason = (c: any) => {
+  const getCaseSubtext = (c: any) => {
     const custName = (c.customer_name || "").toLowerCase();
     const state = (c.case_state || "").toUpperCase();
 
     if (custName.includes("priya") || state === "RECOVERED") {
-      return "Recovered via bounded simulation.";
+      return "Recovery outcome recorded in simulation mode.";
     }
     if (custName.includes("vikram") || state === "ESCALATED") {
-      return "High-value review required (Amount >= ₹10,000).";
+      return "High-value review required before autonomous action.";
     }
     if (custName.includes("ananya") || state === "WAIT") {
-      return "Retry budget exhausted — awaiting human/recovery window.";
+      return "Retry budget exhausted — waiting for the configured recovery window / human resolution.";
     }
     return "Prioritized recurring failure case.";
   };
@@ -120,7 +120,7 @@ export default function RiskQueue() {
                 <th className="py-3 px-4">Risk Score</th>
                 <th className="py-3 px-4">Failure Code</th>
                 <th className="py-3 px-4">AI Recommended Action</th>
-                <th className="py-3 px-4">Current State & Sub-Reason</th>
+                <th className="py-3 px-4">Current State & Subtext</th>
                 <th className="py-3 px-4 text-right">Next Best Action</th>
               </tr>
             </thead>
@@ -153,13 +153,15 @@ export default function RiskQueue() {
                       {c.failure_code || "gateway_timeout"}
                     </td>
                     <td className="py-3.5 px-4">
-                      <span className="text-blue-400 font-bold px-2 py-0.5 bg-blue-950 border border-blue-800/80 rounded text-[11px]">
+                      <div className="text-[10px] text-gray-400 font-sans uppercase mb-0.5">AI PROPOSED</div>
+                      <span className="text-blue-400 font-bold px-2 py-0.5 bg-blue-950 border border-blue-800/80 rounded text-[11px] inline-block">
                         {c.recommended_action || "RETRY_LATER"}
                       </span>
                     </td>
                     <td className="py-3.5 px-4 space-y-1">
+                      <div className="text-[10px] text-gray-400 font-sans uppercase mb-0.5">CONTROL STATE</div>
                       <div><StatusBadge status={c.case_state} type="state" /></div>
-                      <div className="text-[10px] text-gray-400 font-sans italic">{getCaseSubReason(c)}</div>
+                      <div className="text-[10px] text-gray-400 font-sans italic max-w-xs">{getCaseSubtext(c)}</div>
                     </td>
                     <td className="py-3.5 px-4 text-right">
                       <Link

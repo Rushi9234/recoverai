@@ -8,7 +8,7 @@ import { StatusBadge } from "@/components/StatusBadge";
 import { TagBadge } from "@/components/TagBadge";
 import {
   ArrowLeft, ShieldCheck, ShieldAlert, Cpu, CheckCircle2, XCircle, Clock,
-  Play, RefreshCw, Lock, AlertTriangle, FileText, Activity, AlertCircle, Info, Zap
+  Play, RefreshCw, Lock, AlertTriangle, FileText, Activity, AlertCircle, Info, Zap, ArrowDown
 } from "lucide-react";
 
 export default function CaseDetailTrace() {
@@ -152,7 +152,7 @@ export default function CaseDetailTrace() {
         </div>
       </div>
 
-      {/* 8-STEP HORIZONTAL DECISION PIPELINE */}
+      {/* 8-STEP HORIZONTAL DECISION PIPELINE (Visually Dominant) */}
       <div className="p-5 bg-[#0d1322] border border-blue-900/60 rounded-xl space-y-3 shadow-xl">
         <div className="flex items-center justify-between">
           <h2 className="text-xs font-mono font-bold tracking-wider text-blue-400 uppercase">RECOVERAI DECISION PIPELINE</h2>
@@ -189,7 +189,7 @@ export default function CaseDetailTrace() {
         </div>
       )}
 
-      {/* 4 PROMINENT CORE STAGE PANELS: AI PROPOSES | POLICY ENGINE | EXECUTOR | OUTCOME */}
+      {/* 4 DISTINCT STAGE BLOCKS: AI PROPOSES | POLICY DECIDES | EXECUTOR ACTS | OUTCOME */}
       <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
         {/* Panel 1: AI PROPOSES */}
         <div className="p-5 bg-[#111827] border border-blue-900/50 rounded-xl space-y-3 shadow-lg">
@@ -211,10 +211,10 @@ export default function CaseDetailTrace() {
           </div>
         </div>
 
-        {/* Panel 2: POLICY ENGINE */}
+        {/* Panel 2: POLICY DECIDES */}
         <div className={`p-5 bg-[#111827] border rounded-xl space-y-3 shadow-lg ${policyBlocked ? "border-red-800/80" : "border-emerald-900/50"}`}>
           <div className="flex items-center justify-between border-b border-gray-800 pb-2">
-            <span className="text-xs font-mono font-bold text-gray-200 uppercase">2. POLICY ENGINE</span>
+            <span className="text-xs font-mono font-bold text-gray-200 uppercase">2. POLICY DECIDES</span>
             <StatusBadge status={policyDecision} type="decision" />
           </div>
           <div className="space-y-1 font-mono text-[11px]">
@@ -225,10 +225,10 @@ export default function CaseDetailTrace() {
           </div>
         </div>
 
-        {/* Panel 3: EXECUTOR */}
+        {/* Panel 3: EXECUTOR ACTS */}
         <div className="p-5 bg-[#111827] border border-purple-900/50 rounded-xl space-y-3 shadow-lg">
           <div className="flex items-center justify-between border-b border-gray-800 pb-2">
-            <span className="text-xs font-mono font-bold text-purple-400 uppercase">3. EXECUTOR</span>
+            <span className="text-xs font-mono font-bold text-purple-400 uppercase">3. EXECUTOR ACTS</span>
             <Play className="w-4 h-4 text-purple-400" />
           </div>
           <div className="space-y-1 font-mono text-xs">
@@ -251,26 +251,38 @@ export default function CaseDetailTrace() {
         </div>
       </div>
 
-      {/* PROMINENT BLOCKED ACTION / SAFETY DEMONSTRATION SECTION */}
+      {/* PROMINENT SAFETY DEMONSTRATION SECTION */}
       {isRecovered && (
-        <div className="p-5 bg-red-950/40 border border-red-800/80 rounded-xl space-y-3 shadow-xl">
-          <div className="flex items-center space-x-2 text-xs font-mono font-bold text-red-400 uppercase">
+        <div className="p-6 bg-red-950/40 border border-red-800/80 rounded-xl space-y-4 shadow-xl">
+          <div className="flex items-center space-x-2 text-xs font-mono font-bold text-red-400 uppercase border-b border-red-900/60 pb-2">
             <ShieldAlert className="w-4 h-4 text-red-400" />
             <span>SAFETY DEMONSTRATION — SECOND ATTEMPT BLOCKED</span>
           </div>
-          <div className="p-3 bg-gray-900 border border-red-900/60 rounded-lg font-mono text-xs space-y-2">
-            <div className="flex items-center justify-between">
-              <span className="text-gray-300 font-bold">ATTEMPTED SECOND RETRY ACTION</span>
-              <span className="px-2.5 py-0.5 text-xs font-bold bg-red-950 text-red-400 border border-red-800 rounded">
-                POLICY DECISION: BLOCKED
-              </span>
+
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4 font-mono text-xs">
+            {/* Step 1: ATTEMPTED SECOND RETRY */}
+            <div className="flex-1 p-4 bg-gray-900 border border-gray-800 rounded-lg space-y-1 text-center w-full">
+              <div className="text-[10px] text-blue-400 font-bold uppercase">1. ATTEMPTED ACTION</div>
+              <div className="text-sm text-white font-bold">ATTEMPTED SECOND RETRY</div>
+              <div className="text-[10px] text-gray-400 font-sans">User clicked execute action again</div>
             </div>
-            <div className="text-gray-400">
-              Reason: <span className="text-red-300 font-bold">Already recovered / retry attempt cap reached.</span>
+
+            <ArrowDown className="w-5 h-5 text-red-400 md:-rotate-90 shrink-0" />
+
+            {/* Step 2: POLICY DECISION BLOCKED */}
+            <div className="flex-1 p-4 bg-gray-900 border border-red-900/80 rounded-lg space-y-1 text-center w-full">
+              <div className="text-[10px] text-red-400 font-bold uppercase">2. POLICY DECISION</div>
+              <div className="text-sm text-red-400 font-bold">BLOCKED</div>
+              <div className="text-[10px] text-red-300 font-sans">`already_recovered` check FAIL</div>
             </div>
-            <div className="text-[11px] text-emerald-400 font-bold flex items-center space-x-1">
-              <CheckCircle2 className="w-3.5 h-3.5" />
-              <span>SAFETY INVARIANT CONFIRMED: This action never reached the executor.</span>
+
+            <ArrowDown className="w-5 h-5 text-red-400 md:-rotate-90 shrink-0" />
+
+            {/* Step 3: REASON & INVARIANT */}
+            <div className="flex-1 p-4 bg-gray-900 border border-red-900/80 rounded-lg space-y-1 text-center w-full">
+              <div className="text-[10px] text-gray-400 font-bold uppercase">3. REASON & INVARIANT</div>
+              <div className="text-xs text-red-300 font-bold">Already recovered / retry limit reached</div>
+              <div className="text-[10px] text-emerald-400 font-bold font-sans">This action never reached the executor.</div>
             </div>
           </div>
         </div>

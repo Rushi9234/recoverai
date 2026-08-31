@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import { fetchApi } from "@/lib/api";
-import { UserCheck, ShieldCheck, AlertCircle, RefreshCw, Lock, MessageSquare, CheckCircle2, XCircle, ShieldAlert } from "lucide-react";
+import { UserCheck, ShieldCheck, AlertCircle, RefreshCw, Lock, MessageSquare, CheckCircle2, XCircle, ShieldAlert, ArrowDown } from "lucide-react";
 
 export default function ContactGuardScreen() {
   const [customerId, setCustomerId] = useState("cust_ananya_303");
@@ -12,7 +12,7 @@ export default function ContactGuardScreen() {
     details: {
       contacts_24h: 1,
       limit_24h: 1,
-      contacts_7d: 2,
+      contacts_7d: 3,
       limit_7d: 3,
       cooldown_remaining_hours: 18.5
     }
@@ -50,69 +50,80 @@ export default function ContactGuardScreen() {
       </div>
 
       {/* Contact Budget Summary Cards */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 font-mono text-xs">
+        {/* Card 1: 24H Contact Cap */}
         <div className="p-4 bg-[#111827] border border-gray-800 rounded-xl space-y-1">
-          <div className="text-[10px] font-mono text-gray-400 uppercase">24H Contact Cap</div>
-          <div className="text-xl font-bold font-mono text-blue-400">1 / 24 hrs</div>
-          <div className="text-[10px] text-gray-400 font-mono">Max 1 outreach message per day</div>
+          <div className="text-[10px] text-gray-400 uppercase">24H Contact Cap</div>
+          <div className="text-lg font-bold text-red-400">USED: 1 / 1</div>
+          <div className="text-[10px] text-red-400 font-bold">NEXT OUTREACH: BLOCKED</div>
         </div>
 
+        {/* Card 2: 7-Day Contact Cap */}
         <div className="p-4 bg-[#111827] border border-gray-800 rounded-xl space-y-1">
-          <div className="text-[10px] font-mono text-gray-400 uppercase">7-Day Contact Cap</div>
-          <div className="text-xl font-bold font-mono text-purple-400">3 / 7 days</div>
-          <div className="text-[10px] text-gray-400 font-mono">Max 3 outreach messages per week</div>
+          <div className="text-[10px] text-gray-400 uppercase">7-Day Contact Cap</div>
+          <div className="text-lg font-bold text-amber-400">USED: 3 / 3</div>
+          <div className="text-[10px] text-amber-400 font-bold">STATUS: AT LIMIT</div>
         </div>
 
+        {/* Card 3: Quiet Cooldown */}
         <div className="p-4 bg-[#111827] border border-gray-800 rounded-xl space-y-1">
-          <div className="text-[10px] font-mono text-gray-400 uppercase">Quiet Cooldown</div>
-          <div className="text-xl font-bold font-mono text-amber-400">24 Hours</div>
-          <div className="text-[10px] text-gray-400 font-mono">Mandatory quiet period</div>
+          <div className="text-[10px] text-gray-400 uppercase">Quiet Cooldown</div>
+          <div className="text-lg font-bold text-amber-400">24 Hours</div>
+          <div className="text-[10px] text-gray-400">Mandatory quiet period</div>
         </div>
 
+        {/* Card 4: Consent Status */}
         <div className="p-4 bg-[#111827] border border-gray-800 rounded-xl space-y-1">
-          <div className="text-[10px] font-mono text-gray-400 uppercase">Consent Status</div>
-          <div className="text-xl font-bold font-mono text-emerald-400">CONSENTED</div>
-          <div className="text-[10px] text-gray-400 font-mono">Verified merchant opt-in</div>
+          <div className="text-[10px] text-gray-400 uppercase">Consent Status</div>
+          <div className="text-lg font-bold text-emerald-400">CONSENTED</div>
+          <div className="text-[10px] text-gray-400">Verified opt-in</div>
         </div>
 
+        {/* Card 5: Suppression State */}
         <div className="p-4 bg-[#111827] border border-gray-800 rounded-xl space-y-1">
-          <div className="text-[10px] font-mono text-gray-400 uppercase">Suppression State</div>
-          <div className="text-xl font-bold font-mono text-emerald-400">NONE</div>
-          <div className="text-[10px] text-gray-400 font-mono">No active DND/opt-out</div>
+          <div className="text-[10px] text-gray-400 uppercase">Suppression State</div>
+          <div className="text-lg font-bold text-emerald-400">NONE</div>
+          <div className="text-[10px] text-gray-400">No active opt-out</div>
         </div>
       </div>
 
-      {/* Safety Demonstration: AI Recommendation vs Contact Guard Block */}
-      <div className="p-5 bg-[#0e1626] border border-red-900/60 rounded-xl space-y-3 shadow-xl">
-        <div className="flex items-center space-x-2 text-xs font-mono font-bold text-red-400 uppercase">
+      {/* Safety Panel Explicit Story: AI PROPOSAL -> CONTACT GUARD BLOCKED -> REASON */}
+      <div className="p-6 bg-[#0e1626] border border-red-900/80 rounded-xl space-y-4 shadow-xl">
+        <div className="flex items-center space-x-2 text-xs font-mono font-bold text-red-400 uppercase border-b border-red-900/60 pb-2">
           <ShieldAlert className="w-4 h-4 text-red-400" />
           <span>SAFETY DEMONSTRATION — CONTACT BUDGET OVERRIDE</span>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 font-mono text-xs">
-          <div className="p-4 bg-gray-900 border border-gray-800 rounded-lg space-y-2">
-            <div className="flex items-center justify-between text-blue-400 font-bold">
-              <span>1. AI RECOMMENDED ACTION</span>
-              <MessageSquare className="w-4 h-4" />
-            </div>
+        <div className="flex flex-col md:flex-row items-center justify-between gap-4 font-mono text-xs">
+          {/* Step 1: AI PROPOSAL */}
+          <div className="flex-1 p-4 bg-gray-900 border border-gray-800 rounded-lg space-y-1 text-center w-full">
+            <div className="text-[10px] text-blue-400 font-bold uppercase">1. AI PROPOSAL</div>
             <div className="text-sm text-white font-bold">CUSTOMER_OUTREACH</div>
-            <p className="text-[11px] text-gray-400 font-sans">AI proposes sending email link to update payment instrument details for customer Ananya Roy (`cust_ananya_303`).</p>
+            <div className="text-[10px] text-gray-400 font-sans">Proposes sending payment link email</div>
           </div>
 
-          <div className="p-4 bg-gray-900 border border-red-900/60 rounded-lg space-y-2">
-            <div className="flex items-center justify-between text-red-400 font-bold">
-              <span>2. CONTACT GUARD DECISION</span>
-              <Lock className="w-4 h-4" />
-            </div>
-            <div className="text-sm text-red-400 font-bold">DECISION: BLOCKED</div>
-            <p className="text-[11px] text-red-300 font-sans">Reason: 24-hour contact limit exceeded (1 message sent in last 24h). Contact Guard overrides AI proposal and prevents sending message.</p>
+          <ArrowDown className="w-5 h-5 text-red-400 md:-rotate-90 shrink-0" />
+
+          {/* Step 2: CONTACT GUARD */}
+          <div className="flex-1 p-4 bg-gray-900 border border-red-900/80 rounded-lg space-y-1 text-center w-full">
+            <div className="text-[10px] text-red-400 font-bold uppercase">2. CONTACT GUARD</div>
+            <div className="text-sm text-red-400 font-bold">BLOCKED</div>
+            <div className="text-[10px] text-red-300 font-sans">Budget cap enforced</div>
+          </div>
+
+          <ArrowDown className="w-5 h-5 text-red-400 md:-rotate-90 shrink-0" />
+
+          {/* Step 3: REASON & INVARIANT */}
+          <div className="flex-1 p-4 bg-gray-900 border border-red-900/80 rounded-lg space-y-1 text-center w-full">
+            <div className="text-[10px] text-gray-400 font-bold uppercase">3. REASON & INVARIANT</div>
+            <div className="text-xs text-red-300 font-bold">24-hour contact limit already reached.</div>
+            <div className="text-[10px] text-emerald-400 font-bold font-sans">This action never reached the messaging executor.</div>
           </div>
         </div>
       </div>
 
       {/* Test Form & Evaluation Result */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-        {/* Form */}
         <div className="p-6 bg-[#111827] border border-gray-800 rounded-xl space-y-4">
           <h3 className="text-xs font-mono font-bold text-gray-200 uppercase">TEST CONTACT BUDGET EVALUATION</h3>
 
@@ -133,12 +144,11 @@ export default function ContactGuardScreen() {
               className="w-full py-2.5 bg-blue-600 hover:bg-blue-500 text-white font-bold rounded-lg shadow-lg shadow-blue-600/30 flex items-center justify-center space-x-2 transition"
             >
               {loading ? <RefreshCw className="w-4 h-4 animate-spin" /> : <UserCheck className="w-4 h-4" />}
-              <span>CHECK CONTACT GUARD BUDGET</span>
+              <span>EVALUATE CUSTOMER OUTREACH BUDGET</span>
             </button>
           </form>
         </div>
 
-        {/* Evaluation Output */}
         <div className="p-6 bg-[#111827] border border-gray-800 rounded-xl space-y-4">
           <h3 className="text-xs font-mono font-bold text-gray-200 uppercase">EVALUATION RESULT</h3>
 
