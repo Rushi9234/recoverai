@@ -2,27 +2,29 @@ import React from "react";
 
 interface StatusBadgeProps {
   status: string;
-  type?: "state" | "priority" | "decision" | "outcome";
+  type?: "state" | "priority" | "decision" | "action";
 }
 
 export const StatusBadge: React.FC<StatusBadgeProps> = ({ status, type = "state" }) => {
   const s = (status || "").toUpperCase();
-  let color = "bg-gray-800 text-gray-300 border-gray-700";
 
-  if (s === "CRITICAL" || s === "FAILED" || s === "BLOCKED" || s === "BLOCK") {
-    color = "bg-red-950/70 text-red-400 border-red-800";
-  } else if (s === "HIGH" || s === "ESCALATED" || s === "ESCALATE") {
-    color = "bg-amber-950/70 text-amber-400 border-amber-800";
-  } else if (s === "MEDIUM" || s === "WAIT" || s === "WAITING" || s === "POLICY_CHECK") {
-    color = "bg-yellow-950/70 text-yellow-400 border-yellow-800";
-  } else if (s === "LOW" || s === "RECOVERED" || s === "SUCCEEDED" || s === "ALLOW" || s === "APPROVED") {
-    color = "bg-emerald-950/70 text-emerald-400 border-emerald-800";
-  } else if (s === "NEW" || s === "INGESTED" || s === "RISK_DETECTED" || s === "DIAGNOSED" || s === "EXECUTING") {
-    color = "bg-blue-950/70 text-blue-400 border-blue-800";
+  let badgeStyle = "bg-gray-100 text-gray-700 border-gray-200";
+
+  // Decision & State Colors
+  if (["ALLOW", "RECOVERED", "SUCCEEDED", "PASS", "CONSENTED"].includes(s)) {
+    badgeStyle = "bg-emerald-50 text-emerald-800 border-emerald-200 font-semibold";
+  } else if (["BLOCK", "BLOCKED", "FAIL", "FAILED", "REJECTED", "WITHDRAWN"].includes(s)) {
+    badgeStyle = "bg-rose-50 text-rose-800 border-rose-200 font-semibold";
+  } else if (["ESCALATE", "ESCALATED", "HIGH", "CRITICAL"].includes(s)) {
+    badgeStyle = "bg-amber-50 text-amber-800 border-amber-200 font-semibold";
+  } else if (["WAIT", "DELAYED", "MEDIUM"].includes(s)) {
+    badgeStyle = "bg-slate-100 text-slate-700 border-slate-200 font-medium";
+  } else if (["LOW", "NEW", "RISK_DETECTED", "POLICY_CHECK"].includes(s)) {
+    badgeStyle = "bg-[#f4f2e9] text-[#55534e] border-[#e2dec9] font-medium";
   }
 
   return (
-    <span className={`px-2.5 py-0.5 text-xs font-mono font-semibold rounded-full border ${color}`}>
+    <span className={`inline-flex items-center px-2 py-0.5 text-[10px] font-mono tracking-wider uppercase rounded border ${badgeStyle}`}>
       {s}
     </span>
   );

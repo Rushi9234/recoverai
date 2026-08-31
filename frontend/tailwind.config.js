@@ -9,20 +9,17 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        background: "#090d16",
-        surface: "#111827",
-        card: "#1f2937",
-        border: "#374151",
-        primary: {
-          50: "#eff6ff",
-          500: "#3b82f6",
-          600: "#2563eb",
-          700: "#1d4ed8",
+        canvas: "#f7f5ef",
+        sidebar: "#0d0e12",
+        card: "#ffffff",
+        border: "#e5e1d5",
+        brand: {
+          gold: "#b8860b",
+          goldLight: "#fffbeb",
+          goldDark: "#92400e",
+          cyan: "#0d9488",
+          cyanLight: "#f0fdfa",
         },
-        success: "#10b981",
-        warning: "#f59e0b",
-        danger: "#ef4444",
-        purple: "#8b5cf6",
       },
     },
   },

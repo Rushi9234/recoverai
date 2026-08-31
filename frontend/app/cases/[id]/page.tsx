@@ -82,8 +82,8 @@ export default function CaseDetailTrace() {
   if (loading && !data) {
     return (
       <div className="flex items-center justify-center min-h-[60vh]">
-        <div className="flex items-center space-x-3 text-gray-400 font-mono text-sm">
-          <RefreshCw className="w-5 h-5 animate-spin text-blue-500" />
+        <div className="flex items-center space-x-3 text-[#6e6d67] font-mono text-xs">
+          <RefreshCw className="w-4 h-4 animate-spin text-[#d97706]" />
           <span>Loading Decision Pipeline for Case {caseId}...</span>
         </div>
       </div>
@@ -92,9 +92,9 @@ export default function CaseDetailTrace() {
 
   if (!data) {
     return (
-      <div className="p-8 text-center text-gray-400 space-y-4">
+      <div className="p-8 text-center text-[#6e6d67] space-y-4">
         <div>Case not found or failed to load.</div>
-        <Link href="/cases" className="text-blue-400 text-xs font-mono underline">Return to Risk Queue</Link>
+        <Link href="/cases" className="text-[#b45309] text-xs font-mono underline">Return to Risk Queue</Link>
       </div>
     );
   }
@@ -115,56 +115,56 @@ export default function CaseDetailTrace() {
   const policyBlocked = policyDecision === "BLOCK" || isRecovered;
 
   const pipelineSteps = [
-    { label: "EVENT", status: "RECEIVED", icon: FileText, color: "text-gray-300" },
-    { label: "RISK", status: `SCORE ${risk.score || 42}`, icon: AlertCircle, color: "text-amber-400" },
-    { label: "DIAGNOSIS", status: diagnosis.category || "TECHNICAL", icon: Cpu, color: "text-blue-400" },
-    { label: "RECOMMENDATION", status: recommendation.action || "RETRY", icon: Zap, color: "text-purple-400" },
-    { label: "POLICY", status: policyDecision, icon: ShieldCheck, color: policyBlocked ? "text-red-400" : "text-emerald-400" },
-    { label: "EXECUTION", status: actions.length > 0 ? actions[0].status : "READY", icon: Play, color: "text-purple-300" },
-    { label: "OUTCOME", status: actions.length > 0 ? actions[0].outcome_type : "SIMULATED", icon: CheckCircle2, color: "text-emerald-400" },
-    { label: "AUDIT", status: "CHAIN VALID", icon: Activity, color: "text-emerald-400" },
+    { label: "EVENT", status: "RECEIVED", icon: FileText, color: "text-[#55534e]" },
+    { label: "RISK", status: `SCORE ${risk.score || 42}`, icon: AlertCircle, color: "text-[#b45309]" },
+    { label: "DIAGNOSIS", status: diagnosis.category || "TECHNICAL", icon: Cpu, color: "text-[#0284c7]" },
+    { label: "RECOMMENDATION", status: recommendation.action || "RETRY", icon: Zap, color: "text-[#6d28d9]" },
+    { label: "POLICY", status: policyDecision, icon: ShieldCheck, color: policyBlocked ? "text-[#be123c]" : "text-[#047857]" },
+    { label: "EXECUTION", status: actions.length > 0 ? actions[0].status : "READY", icon: Play, color: "text-[#6d28d9]" },
+    { label: "OUTCOME", status: actions.length > 0 ? actions[0].outcome_type : "SIMULATED", icon: CheckCircle2, color: "text-[#047857]" },
+    { label: "AUDIT", status: "CHAIN VALID", icon: Activity, color: "text-[#047857]" },
   ];
 
   return (
     <div className="space-y-8">
       {/* Back button & Hero Case Header */}
-      <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 pb-4 border-b border-gray-800">
+      <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 pb-4 border-b border-[#e5e1d5]">
         <div className="flex items-center space-x-3">
-          <Link href="/cases" className="p-2 bg-gray-900 hover:bg-gray-800 text-gray-400 hover:text-white rounded-lg border border-gray-800 transition">
+          <Link href="/cases" className="p-2 bg-white hover:bg-[#f4f2e9] text-[#6e6d67] hover:text-[#111113] rounded-lg border border-[#d6d2c4] transition">
             <ArrowLeft className="w-4 h-4" />
           </Link>
           <div>
             <div className="flex items-center space-x-2">
-              <h1 className="text-xl font-bold font-mono text-white">Case Trace: {c.id}</h1>
+              <h1 className="text-xl font-bold font-serif text-[#111113]">Case Trace: {c.id}</h1>
               <StatusBadge status={c.case_state} type="state" />
               <StatusBadge status={c.priority} type="priority" />
             </div>
-            <p className="text-xs text-gray-400 mt-1">
-              Customer: <span className="text-gray-200 font-semibold">{customer.name}</span> ({customer.email_masked}) | 
-              Sub: <span className="font-mono text-blue-400">{subscription.external_ref || "sub_demo"}</span>
+            <p className="text-xs text-[#6e6d67] mt-1">
+              Customer: <span className="text-[#111113] font-semibold">{customer.name}</span> ({customer.email_masked}) | 
+              Sub: <span className="font-mono text-[#b45309]">{subscription.external_ref || "sub_demo"}</span>
             </p>
           </div>
         </div>
 
         <div className="text-right font-mono">
-          <div className="text-xs text-gray-400">REVENUE EXPOSURE AT RISK</div>
-          <div className="text-2xl font-bold text-amber-400">{formatCurrency(c.risk_amount_minor || 0)}</div>
+          <div className="text-xs text-[#6e6d67]">REVENUE EXPOSURE AT RISK</div>
+          <div className="text-2xl font-bold text-[#b45309]">{formatCurrency(c.risk_amount_minor || 0)}</div>
         </div>
       </div>
 
-      {/* 8-STEP HORIZONTAL DECISION PIPELINE (Visually Dominant) */}
-      <div className="p-5 bg-[#0d1322] border border-blue-900/60 rounded-xl space-y-3 shadow-xl">
+      {/* 8-STEP HORIZONTAL DECISION PIPELINE */}
+      <div className="p-5 bg-white border border-[#e5e1d5] rounded-xl space-y-3 shadow-sm">
         <div className="flex items-center justify-between">
-          <h2 className="text-xs font-mono font-bold tracking-wider text-blue-400 uppercase">RECOVERAI DECISION PIPELINE</h2>
-          <span className="text-[10px] font-mono text-gray-400">DECISION CONTROL FLOW: EVENT → AI → POLICY → EXECUTOR → AUDIT</span>
+          <h2 className="text-xs font-mono font-bold tracking-wider text-[#b8860b] uppercase">RECOVERAI DECISION PIPELINE</h2>
+          <span className="text-[10px] font-mono text-[#6e6d67]">DECISION CONTROL FLOW: EVENT → AI → POLICY → EXECUTOR → AUDIT</span>
         </div>
 
         <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-2">
           {pipelineSteps.map((step, idx) => {
             const Icon = step.icon;
             return (
-              <div key={idx} className="p-2.5 bg-gray-900/90 border border-gray-800 rounded-lg space-y-1 relative">
-                <div className="flex items-center justify-between text-[10px] font-mono font-bold text-gray-400">
+              <div key={idx} className="p-2.5 bg-[#fcfbf7] border border-[#e5e1d5] rounded-lg space-y-1 relative">
+                <div className="flex items-center justify-between text-[10px] font-mono font-bold text-[#6e6d67]">
                   <span>{idx + 1}. {step.label}</span>
                   <Icon className={`w-3 h-3 ${step.color}`} />
                 </div>
@@ -177,14 +177,14 @@ export default function CaseDetailTrace() {
 
       {/* Action Error / Success Banners */}
       {actionError && (
-        <div className="p-4 bg-red-950/90 border border-red-800 rounded-xl text-red-300 text-xs font-mono flex items-center space-x-2">
-          <XCircle className="w-4 h-4 text-red-400 shrink-0" />
+        <div className="p-4 bg-[#fff1f2] border border-[#fecdd3] rounded-xl text-[#be123c] text-xs font-mono flex items-center space-x-2">
+          <XCircle className="w-4 h-4 text-[#be123c] shrink-0" />
           <span>{actionError}</span>
         </div>
       )}
       {actionSuccess && (
-        <div className="p-4 bg-emerald-950/90 border border-emerald-800 rounded-xl text-emerald-300 text-xs font-mono flex items-center space-x-2">
-          <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
+        <div className="p-4 bg-[#ecfdf5] border border-[#a7f3d0] rounded-xl text-[#047857] text-xs font-mono flex items-center space-x-2">
+          <CheckCircle2 className="w-4 h-4 text-[#047857] shrink-0" />
           <span>{actionSuccess}</span>
         </div>
       )}
@@ -192,18 +192,18 @@ export default function CaseDetailTrace() {
       {/* 4 DISTINCT STAGE BLOCKS: AI PROPOSES | POLICY DECIDES | EXECUTOR ACTS | OUTCOME */}
       <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
         {/* Panel 1: AI PROPOSES */}
-        <div className="p-5 bg-[#111827] border border-blue-900/50 rounded-xl space-y-3 shadow-lg">
-          <div className="flex items-center justify-between border-b border-gray-800 pb-2">
-            <span className="text-xs font-mono font-bold text-blue-400 uppercase">1. AI PROPOSES</span>
-            <Cpu className="w-4 h-4 text-blue-400" />
+        <div className="p-5 bg-white border border-[#e5e1d5] rounded-xl space-y-3 shadow-sm">
+          <div className="flex items-center justify-between border-b border-[#e5e1d5] pb-2">
+            <span className="text-xs font-mono font-bold text-[#0284c7] uppercase">1. AI PROPOSES</span>
+            <Cpu className="w-4 h-4 text-[#0284c7]" />
           </div>
           <div className="space-y-1">
-            <div className="text-sm font-mono font-bold text-white">{recommendation.action || "RETRY_LATER"}</div>
-            <div className="text-xs font-mono text-blue-400 font-bold">Confidence: {((diagnosis.confidence || 0.95) * 100).toFixed(0)}%</div>
+            <div className="text-sm font-mono font-bold text-[#111113]">{recommendation.action || "RETRY_LATER"}</div>
+            <div className="text-xs font-mono text-[#0284c7] font-bold">Confidence: {((diagnosis.confidence || 0.95) * 100).toFixed(0)}%</div>
           </div>
-          <div className="space-y-1 pt-1 border-t border-gray-800/80">
-            <div className="text-[10px] font-mono text-gray-400">citable evidence:</div>
-            <div className="space-y-1 font-mono text-[10px] text-gray-300">
+          <div className="space-y-1 pt-1 border-t border-[#e5e1d5]">
+            <div className="text-[10px] font-mono text-[#6e6d67]">citable evidence:</div>
+            <div className="space-y-1 font-mono text-[10px] text-[#33322e]">
               <div>• failure_code={c.failure_code || "gateway_timeout"}</div>
               <div>• {subscription.retry_count || 1} retry attempt used</div>
               <div>• account_history=healthy</div>
@@ -212,77 +212,77 @@ export default function CaseDetailTrace() {
         </div>
 
         {/* Panel 2: POLICY DECIDES */}
-        <div className={`p-5 bg-[#111827] border rounded-xl space-y-3 shadow-lg ${policyBlocked ? "border-red-800/80" : "border-emerald-900/50"}`}>
-          <div className="flex items-center justify-between border-b border-gray-800 pb-2">
-            <span className="text-xs font-mono font-bold text-gray-200 uppercase">2. POLICY DECIDES</span>
+        <div className={`p-5 bg-white border rounded-xl space-y-3 shadow-sm ${policyBlocked ? "border-[#fecdd3]" : "border-[#a7f3d0]"}`}>
+          <div className="flex items-center justify-between border-b border-[#e5e1d5] pb-2">
+            <span className="text-xs font-mono font-bold text-[#111113] uppercase">2. POLICY DECIDES</span>
             <StatusBadge status={policyDecision} type="decision" />
           </div>
           <div className="space-y-1 font-mono text-[11px]">
-            <div className="flex justify-between"><span className="text-gray-400">duplicate_check:</span><span className="text-emerald-400 font-bold">✓ PASS</span></div>
-            <div className="flex justify-between"><span className="text-gray-400">retry_limit:</span><span className="text-emerald-400 font-bold">✓ PASS</span></div>
-            <div className="flex justify-between"><span className="text-gray-400">cooldown:</span><span className="text-emerald-400 font-bold">✓ PASS</span></div>
-            <div className="flex justify-between"><span className="text-gray-400">high_value_review:</span><span className={isEscalated ? "text-amber-400 font-bold" : "text-emerald-400 font-bold"}>{isEscalated ? "⚠ ESCALATE" : "✓ PASS"}</span></div>
+            <div className="flex justify-between"><span className="text-[#6e6d67]">duplicate_check:</span><span className="text-[#047857] font-bold">✓ PASS</span></div>
+            <div className="flex justify-between"><span className="text-[#6e6d67]">retry_limit:</span><span className="text-[#047857] font-bold">✓ PASS</span></div>
+            <div className="flex justify-between"><span className="text-[#6e6d67]">cooldown:</span><span className="text-[#047857] font-bold">✓ PASS</span></div>
+            <div className="flex justify-between"><span className="text-[#6e6d67]">high_value_review:</span><span className={isEscalated ? "text-[#b45309] font-bold" : "text-[#047857] font-bold"}>{isEscalated ? "⚠ ESCALATE" : "✓ PASS"}</span></div>
           </div>
         </div>
 
         {/* Panel 3: EXECUTOR ACTS */}
-        <div className="p-5 bg-[#111827] border border-purple-900/50 rounded-xl space-y-3 shadow-lg">
-          <div className="flex items-center justify-between border-b border-gray-800 pb-2">
-            <span className="text-xs font-mono font-bold text-purple-400 uppercase">3. EXECUTOR ACTS</span>
-            <Play className="w-4 h-4 text-purple-400" />
+        <div className="p-5 bg-white border border-[#e5e1d5] rounded-xl space-y-3 shadow-sm">
+          <div className="flex items-center justify-between border-b border-[#e5e1d5] pb-2">
+            <span className="text-xs font-mono font-bold text-[#6d28d9] uppercase">3. EXECUTOR ACTS</span>
+            <Play className="w-4 h-4 text-[#6d28d9]" />
           </div>
           <div className="space-y-1 font-mono text-xs">
-            <div className="text-gray-300 font-bold">Adapter: {execMode}</div>
-            <div className="text-[11px] text-gray-400">Idempotency Lock: ACQUIRED</div>
-            <div className="text-[11px] text-purple-300 font-semibold">Status: {actions.length > 0 ? actions[0].status : "READY"}</div>
+            <div className="text-[#111113] font-bold">Adapter: {execMode}</div>
+            <div className="text-[11px] text-[#6e6d67]">Idempotency Lock: ACQUIRED</div>
+            <div className="text-[11px] text-[#6d28d9] font-semibold">Status: {actions.length > 0 ? actions[0].status : "READY"}</div>
           </div>
         </div>
 
         {/* Panel 4: OUTCOME */}
-        <div className="p-5 bg-[#111827] border border-emerald-900/50 rounded-xl space-y-3 shadow-lg">
-          <div className="flex items-center justify-between border-b border-gray-800 pb-2">
-            <span className="text-xs font-mono font-bold text-emerald-400 uppercase">4. OUTCOME</span>
+        <div className="p-5 bg-white border border-[#e5e1d5] rounded-xl space-y-3 shadow-sm">
+          <div className="flex items-center justify-between border-b border-[#e5e1d5] pb-2">
+            <span className="text-xs font-mono font-bold text-[#047857] uppercase">4. OUTCOME</span>
             <TagBadge tag={actions.length > 0 ? actions[0].outcome_type : "SIMULATED"} />
           </div>
           <div className="space-y-1 font-mono">
-            <div className="text-lg font-bold text-emerald-400">{actions.length > 0 ? formatCurrency(actions[0].outcome_amount_minor) : "₹0"}</div>
-            <div className="text-[10px] text-gray-400 font-sans italic">Simulation outcome — not live payment recovery.</div>
+            <div className="text-lg font-bold text-[#047857]">{actions.length > 0 ? formatCurrency(actions[0].outcome_amount_minor) : "₹0"}</div>
+            <div className="text-[10px] text-[#6e6d67] font-sans italic">Simulation outcome — not live payment recovery.</div>
           </div>
         </div>
       </div>
 
       {/* PROMINENT SAFETY DEMONSTRATION SECTION */}
       {isRecovered && (
-        <div className="p-6 bg-red-950/40 border border-red-800/80 rounded-xl space-y-4 shadow-xl">
-          <div className="flex items-center space-x-2 text-xs font-mono font-bold text-red-400 uppercase border-b border-red-900/60 pb-2">
-            <ShieldAlert className="w-4 h-4 text-red-400" />
+        <div className="p-6 bg-[#fff1f2] border border-[#fecdd3] rounded-xl space-y-4 shadow-sm">
+          <div className="flex items-center space-x-2 text-xs font-mono font-bold text-[#be123c] uppercase border-b border-[#fecdd3] pb-2">
+            <ShieldAlert className="w-4 h-4 text-[#be123c]" />
             <span>SAFETY DEMONSTRATION — SECOND ATTEMPT BLOCKED</span>
           </div>
 
           <div className="flex flex-col md:flex-row items-center justify-between gap-4 font-mono text-xs">
             {/* Step 1: ATTEMPTED SECOND RETRY */}
-            <div className="flex-1 p-4 bg-gray-900 border border-gray-800 rounded-lg space-y-1 text-center w-full">
-              <div className="text-[10px] text-blue-400 font-bold uppercase">1. ATTEMPTED ACTION</div>
-              <div className="text-sm text-white font-bold">ATTEMPTED SECOND RETRY</div>
-              <div className="text-[10px] text-gray-400 font-sans">User clicked execute action again</div>
+            <div className="flex-1 p-4 bg-white border border-[#e5e1d5] rounded-lg space-y-1 text-center w-full">
+              <div className="text-[10px] text-[#0284c7] font-bold uppercase">1. ATTEMPTED ACTION</div>
+              <div className="text-sm text-[#111113] font-bold">ATTEMPTED SECOND RETRY</div>
+              <div className="text-[10px] text-[#6e6d67] font-sans">User clicked execute action again</div>
             </div>
 
-            <ArrowDown className="w-5 h-5 text-red-400 md:-rotate-90 shrink-0" />
+            <ArrowDown className="w-5 h-5 text-[#be123c] md:-rotate-90 shrink-0" />
 
             {/* Step 2: POLICY DECISION BLOCKED */}
-            <div className="flex-1 p-4 bg-gray-900 border border-red-900/80 rounded-lg space-y-1 text-center w-full">
-              <div className="text-[10px] text-red-400 font-bold uppercase">2. POLICY DECISION</div>
-              <div className="text-sm text-red-400 font-bold">BLOCKED</div>
-              <div className="text-[10px] text-red-300 font-sans">`already_recovered` check FAIL</div>
+            <div className="flex-1 p-4 bg-white border border-[#fecdd3] rounded-lg space-y-1 text-center w-full">
+              <div className="text-[10px] text-[#be123c] font-bold uppercase">2. POLICY DECISION</div>
+              <div className="text-sm text-[#be123c] font-bold">BLOCKED</div>
+              <div className="text-[10px] text-[#be123c] font-sans">`already_recovered` check FAIL</div>
             </div>
 
-            <ArrowDown className="w-5 h-5 text-red-400 md:-rotate-90 shrink-0" />
+            <ArrowDown className="w-5 h-5 text-[#be123c] md:-rotate-90 shrink-0" />
 
             {/* Step 3: REASON & INVARIANT */}
-            <div className="flex-1 p-4 bg-gray-900 border border-red-900/80 rounded-lg space-y-1 text-center w-full">
-              <div className="text-[10px] text-gray-400 font-bold uppercase">3. REASON & INVARIANT</div>
-              <div className="text-xs text-red-300 font-bold">Already recovered / retry limit reached</div>
-              <div className="text-[10px] text-emerald-400 font-bold font-sans">This action never reached the executor.</div>
+            <div className="flex-1 p-4 bg-white border border-[#fecdd3] rounded-lg space-y-1 text-center w-full">
+              <div className="text-[10px] text-[#6e6d67] font-bold uppercase">3. REASON & INVARIANT</div>
+              <div className="text-xs text-[#be123c] font-bold">Already recovered / retry limit reached</div>
+              <div className="text-[10px] text-[#047857] font-bold font-sans">This action never reached the executor.</div>
             </div>
           </div>
         </div>
@@ -293,22 +293,22 @@ export default function CaseDetailTrace() {
         {/* Left Column: Context & Diagnosis */}
         <div className="space-y-6">
           {/* Diagnosis & Evidence */}
-          <div className="p-5 bg-[#111827] border border-gray-800 rounded-xl space-y-4">
+          <div className="p-5 bg-white border border-[#e5e1d5] rounded-xl space-y-4 shadow-sm">
             <div className="flex items-center justify-between">
-              <h3 className="text-xs font-mono font-bold text-gray-200 uppercase">FAILURE DIAGNOSIS</h3>
-              <span className="text-xs font-mono text-blue-400 font-bold">{((diagnosis.confidence || 0.95) * 100).toFixed(0)}% CONFIDENCE</span>
+              <h3 className="text-xs font-mono font-bold text-[#111113] uppercase">FAILURE DIAGNOSIS</h3>
+              <span className="text-xs font-mono text-[#0284c7] font-bold">{((diagnosis.confidence || 0.95) * 100).toFixed(0)}% CONFIDENCE</span>
             </div>
 
             <div className="space-y-2">
-              <div className="text-sm font-mono font-bold text-amber-400">{diagnosis.category || "TRANSIENT_TECHNICAL_FAILURE"}</div>
-              <p className="text-xs text-gray-300 leading-relaxed">{diagnosis.explanation}</p>
+              <div className="text-sm font-mono font-bold text-[#b45309]">{diagnosis.category || "TRANSIENT_TECHNICAL_FAILURE"}</div>
+              <p className="text-xs text-[#33322e] leading-relaxed">{diagnosis.explanation}</p>
             </div>
 
-            <div className="space-y-2 pt-2 border-t border-gray-800">
-              <div className="text-[11px] font-mono text-gray-400">STRUCTURED EVIDENCE CITED:</div>
+            <div className="space-y-2 pt-2 border-t border-[#e5e1d5]">
+              <div className="text-[11px] font-mono text-[#6e6d67]">STRUCTURED EVIDENCE CITED:</div>
               <div className="space-y-1">
                 {(diagnosis.evidence || []).map((ev: string, idx: number) => (
-                  <div key={idx} className="p-1.5 bg-gray-900 border border-gray-800 rounded text-[11px] font-mono text-gray-300">
+                  <div key={idx} className="p-1.5 bg-[#fcfbf7] border border-[#e5e1d5] rounded text-[11px] font-mono text-[#33322e]">
                     • {ev}
                   </div>
                 ))}
@@ -317,23 +317,23 @@ export default function CaseDetailTrace() {
           </div>
 
           {/* Context Details */}
-          <div className="p-5 bg-[#111827] border border-gray-800 rounded-xl space-y-3 font-mono text-xs">
-            <h3 className="text-xs font-bold text-gray-200 uppercase">CASE CONTEXT</h3>
-            <div className="flex justify-between py-1 border-b border-gray-800/60">
-              <span className="text-gray-400">Customer</span>
-              <span className="text-gray-200">{customer.name}</span>
+          <div className="p-5 bg-white border border-[#e5e1d5] rounded-xl space-y-3 font-mono text-xs shadow-sm">
+            <h3 className="text-xs font-bold text-[#111113] uppercase">CASE CONTEXT</h3>
+            <div className="flex justify-between py-1 border-b border-[#e5e1d5]">
+              <span className="text-[#6e6d67]">Customer</span>
+              <span className="text-[#111113] font-semibold">{customer.name}</span>
             </div>
-            <div className="flex justify-between py-1 border-b border-gray-800/60">
-              <span className="text-gray-400">Subscription ID</span>
-              <span className="text-blue-400">{subscription.external_ref || "sub_demo_1042"}</span>
+            <div className="flex justify-between py-1 border-b border-[#e5e1d5]">
+              <span className="text-[#6e6d67]">Subscription ID</span>
+              <span className="text-[#b45309]">{subscription.external_ref || "sub_demo_1042"}</span>
             </div>
-            <div className="flex justify-between py-1 border-b border-gray-800/60">
-              <span className="text-gray-400">Retry Attempts</span>
-              <span className="text-gray-200">{subscription.retry_count || 1} / 3</span>
+            <div className="flex justify-between py-1 border-b border-[#e5e1d5]">
+              <span className="text-[#6e6d67]">Retry Attempts</span>
+              <span className="text-[#111113]">{subscription.retry_count || 1} / 3</span>
             </div>
             <div className="flex justify-between py-1">
-              <span className="text-gray-400">Failure Code</span>
-              <span className="text-amber-400">{c.failure_code || "gateway_timeout"}</span>
+              <span className="text-[#6e6d67]">Failure Code</span>
+              <span className="text-[#b45309]">{c.failure_code || "gateway_timeout"}</span>
             </div>
           </div>
         </div>
@@ -341,9 +341,9 @@ export default function CaseDetailTrace() {
         {/* Center Column: Recommendation & Policy Engine */}
         <div className="space-y-6">
           {/* Policy Engine Checks */}
-          <div className="p-5 bg-[#111827] border border-gray-800 rounded-xl space-y-4">
+          <div className="p-5 bg-white border border-[#e5e1d5] rounded-xl space-y-4 shadow-sm">
             <div className="flex items-center justify-between">
-              <h3 className="text-xs font-mono font-bold text-gray-200 uppercase">POLICY ENGINE HARD CHECKS</h3>
+              <h3 className="text-xs font-mono font-bold text-[#111113] uppercase">POLICY ENGINE HARD CHECKS</h3>
               <StatusBadge status={policyDecision} type="decision" />
             </div>
 
@@ -351,9 +351,9 @@ export default function CaseDetailTrace() {
               {(policyPrev.checks || []).map((check: any, idx: number) => {
                 const isPass = check.result === "PASS";
                 return (
-                  <div key={idx} className="flex items-center justify-between p-2.5 bg-gray-900 border border-gray-800 rounded-lg">
-                    <span className="text-gray-300">{check.rule}</span>
-                    <span className={`font-bold ${isPass ? "text-emerald-400" : "text-red-400"}`}>
+                  <div key={idx} className="flex items-center justify-between p-2.5 bg-[#fcfbf7] border border-[#e5e1d5] rounded-lg">
+                    <span className="text-[#33322e]">{check.rule}</span>
+                    <span className={`font-bold ${isPass ? "text-[#047857]" : "text-[#be123c]"}`}>
                       {check.result}
                     </span>
                   </div>
@@ -363,29 +363,29 @@ export default function CaseDetailTrace() {
           </div>
 
           {/* Action Control Panel */}
-          <div className="p-5 bg-[#111827] border border-gray-800 rounded-xl space-y-4">
-            <h3 className="text-xs font-mono font-bold text-gray-200 uppercase">EXECUTION CONTROLS</h3>
+          <div className="p-5 bg-white border border-[#e5e1d5] rounded-xl space-y-4 shadow-sm">
+            <h3 className="text-xs font-mono font-bold text-[#111113] uppercase">EXECUTION CONTROLS</h3>
 
             <div className="space-y-3">
               <div className="flex items-center space-x-3 text-xs font-mono">
-                <span className="text-gray-400">Adapter Mode:</span>
-                <label className="flex items-center space-x-1 text-gray-200 cursor-pointer">
+                <span className="text-[#6e6d67]">Adapter Mode:</span>
+                <label className="flex items-center space-x-1 text-[#111113] cursor-pointer">
                   <input
                     type="radio"
                     name="mode"
                     checked={execMode === "SIMULATION"}
                     onChange={() => setExecMode("SIMULATION")}
-                    className="text-blue-600"
+                    className="text-[#b8860b]"
                   />
                   <span>Simulation</span>
                 </label>
-                <label className="flex items-center space-x-1 text-gray-200 cursor-pointer">
+                <label className="flex items-center space-x-1 text-[#111113] cursor-pointer">
                   <input
                     type="radio"
                     name="mode"
                     checked={execMode === "RAZORPAY_TEST"}
                     onChange={() => setExecMode("RAZORPAY_TEST")}
-                    className="text-blue-600"
+                    className="text-[#b8860b]"
                   />
                   <span>Razorpay Test Mode</span>
                 </label>
@@ -397,8 +397,8 @@ export default function CaseDetailTrace() {
                   disabled={executing || policyBlocked}
                   className={`w-full py-3 px-4 text-xs font-mono font-bold rounded-lg flex items-center justify-center space-x-2 transition ${
                     policyBlocked
-                      ? "bg-gray-800 text-gray-500 cursor-not-allowed border border-gray-700"
-                      : "bg-emerald-600 hover:bg-emerald-500 text-white shadow-lg shadow-emerald-600/30"
+                      ? "bg-[#f4f2e9] text-[#8a8880] cursor-not-allowed border border-[#d6d2c4]"
+                      : "bg-[#047857] hover:bg-[#065f46] text-white shadow-sm"
                   }`}
                 >
                   {policyBlocked ? <Lock className="w-4 h-4" /> : <Play className="w-4 h-4" />}
@@ -408,7 +408,7 @@ export default function CaseDetailTrace() {
                 <button
                   onClick={handleEscalate}
                   disabled={executing}
-                  className="w-full py-2.5 px-4 text-xs font-mono font-bold bg-amber-950/60 hover:bg-amber-900 text-amber-400 border border-amber-800/80 rounded-lg flex items-center justify-center space-x-2 transition"
+                  className="w-full py-2.5 px-4 text-xs font-mono font-bold bg-[#fffbeb] hover:bg-[#fef3c7] text-[#b45309] border border-[#fde68a] rounded-lg flex items-center justify-center space-x-2 transition"
                 >
                   <AlertTriangle className="w-4 h-4" />
                   <span>ESCALATE TO HUMAN REVIEW</span>
@@ -421,22 +421,22 @@ export default function CaseDetailTrace() {
         {/* Right Column: Execution History & Audit */}
         <div className="space-y-6">
           {/* Action History */}
-          <div className="p-5 bg-[#111827] border border-gray-800 rounded-xl space-y-4">
-            <h3 className="text-xs font-mono font-bold text-gray-200 uppercase">ACTION HISTORY & OUTCOMES</h3>
+          <div className="p-5 bg-white border border-[#e5e1d5] rounded-xl space-y-4 shadow-sm">
+            <h3 className="text-xs font-mono font-bold text-[#111113] uppercase">ACTION HISTORY & OUTCOMES</h3>
 
             <div className="space-y-3 font-mono text-xs">
               {actions.length === 0 ? (
-                <div className="text-gray-500 text-center py-4">No actions executed yet.</div>
+                <div className="text-[#6e6d67] text-center py-4">No actions executed yet.</div>
               ) : (
                 actions.map((act: any) => (
-                  <div key={act.id} className="p-3 bg-gray-900 border border-gray-800 rounded-lg space-y-2">
+                  <div key={act.id} className="p-3 bg-[#fcfbf7] border border-[#e5e1d5] rounded-lg space-y-2">
                     <div className="flex items-center justify-between">
-                      <span className="font-bold text-blue-400">{act.action_type}</span>
+                      <span className="font-bold text-[#0284c7]">{act.action_type}</span>
                       <TagBadge tag={act.outcome_type} />
                     </div>
                     <div className="flex items-center justify-between text-[11px]">
-                      <span className="text-gray-400">Status: <span className="text-gray-200">{act.status}</span></span>
-                      <span className="text-emerald-400 font-bold">{formatCurrency(act.outcome_amount_minor)}</span>
+                      <span className="text-[#6e6d67]">Status: <span className="text-[#111113]">{act.status}</span></span>
+                      <span className="text-[#047857] font-bold">{formatCurrency(act.outcome_amount_minor)}</span>
                     </div>
                   </div>
                 ))
@@ -445,20 +445,20 @@ export default function CaseDetailTrace() {
           </div>
 
           {/* Audit Chain */}
-          <div className="p-5 bg-[#111827] border border-gray-800 rounded-xl space-y-4">
+          <div className="p-5 bg-white border border-[#e5e1d5] rounded-xl space-y-4 shadow-sm">
             <div className="flex items-center justify-between">
-              <h3 className="text-xs font-mono font-bold text-gray-200 uppercase">APPEND-ONLY AUDIT CHAIN</h3>
-              <span className="text-[10px] font-mono text-emerald-400 font-bold">CHAIN VALID</span>
+              <h3 className="text-xs font-mono font-bold text-[#111113] uppercase">APPEND-ONLY AUDIT CHAIN</h3>
+              <span className="text-[10px] font-mono text-[#047857] font-bold">CHAIN VALID</span>
             </div>
 
             <div className="space-y-2 overflow-y-auto max-h-64 pr-1 font-mono text-[11px]">
               {auditEvents.map((evt: any) => (
-                <div key={evt.id} className="p-2 bg-gray-900 border border-gray-800/80 rounded space-y-1">
-                  <div className="flex items-center justify-between text-gray-400">
-                    <span className="text-blue-400 font-semibold">{evt.event_type}</span>
-                    <span className="text-[10px] text-gray-500">{evt.actor}</span>
+                <div key={evt.id} className="p-2 bg-[#fcfbf7] border border-[#e5e1d5] rounded space-y-1">
+                  <div className="flex items-center justify-between text-[#6e6d67]">
+                    <span className="text-[#0284c7] font-semibold">{evt.event_type}</span>
+                    <span className="text-[10px] text-[#8a8880]">{evt.actor}</span>
                   </div>
-                  <div className="text-[10px] text-gray-400 truncate">Hash: {evt.integrity_hash?.substring(0, 16)}...</div>
+                  <div className="text-[10px] text-[#6e6d67] truncate">Hash: {evt.integrity_hash?.substring(0, 16)}...</div>
                 </div>
               ))}
             </div>

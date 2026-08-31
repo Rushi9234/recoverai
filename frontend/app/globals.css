@@ -2,15 +2,34 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: 9 13 22;
-  --foreground: 243 244 246;
+@layer base {
+  :root {
+    --background: 247 245 239;
+    --foreground: 26 26 31;
+  }
+
+  body {
+    background-color: #f7f5ef;
+    color: #1a1a1f;
+    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+  }
 }
 
-body {
-  background-color: #090d16;
-  color: #f3f4f6;
-  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  margin: 0;
-  padding: 0;
+/* Custom Scrollbar for Warm Fintech Theme */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #f0ece1;
+}
+::-webkit-scrollbar-thumb {
+  background: #d4cebe;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #b5ae9c;
 }
