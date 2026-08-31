@@ -2,6 +2,7 @@ import hmac
 import hashlib
 import json
 import uuid
+import os
 from typing import Dict, Any, Tuple, Optional
 from fastapi import APIRouter, Request, Header, HTTPException, status, Depends
 from sqlalchemy.orm import Session
@@ -116,8 +117,12 @@ async def handle_razorpay_webhook(
     
     # 1. Verify Signature if secret configured
     sig_verified = False
-    if settings.RAZORPAY_WEBHOOK_SECRET and x_razorpay_signature:
-        sig_verified = verify_razorpay_signature(raw_body, x_razorpay_signature, settings.RAZORPAY_WEBHOOK_SECRET)
+    signature = request.headers.get("x-razorpay-signature") or request.headers.get("X-Razorpay-Signature") or x_razorpay_signature
+    secret = os.environ.get("RAZORPAY_WEBHOOK_SECRET") or settings.RAZORPAY_WEBHOOK_SECRET
+    if secret and signature:
+        sig_verified = verify_razorpay_signature(raw_body, signature, secret)
+        if not sig_verified and secret != settings.RAZORPAY_WEBHOOK_SECRET and settings.RAZORPAY_WEBHOOK_SECRET:
+            sig_verified = verify_razorpay_signature(raw_body, signature, settings.RAZORPAY_WEBHOOK_SECRET)
         if not sig_verified:
             raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail="Invalid Razorpay webhook signature")
 
