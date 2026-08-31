@@ -119,10 +119,14 @@ async def handle_razorpay_webhook(
     sig_verified = False
     signature = request.headers.get("x-razorpay-signature") or request.headers.get("X-Razorpay-Signature") or x_razorpay_signature
     secret = os.environ.get("RAZORPAY_WEBHOOK_SECRET") or settings.RAZORPAY_WEBHOOK_SECRET
-    if secret and signature:
-        sig_verified = verify_razorpay_signature(raw_body, signature, secret)
-        if not sig_verified and secret != settings.RAZORPAY_WEBHOOK_SECRET and settings.RAZORPAY_WEBHOOK_SECRET:
+    
+    if signature:
+        if secret:
+            sig_verified = verify_razorpay_signature(raw_body, signature, secret)
+        if not sig_verified and settings.RAZORPAY_WEBHOOK_SECRET:
             sig_verified = verify_razorpay_signature(raw_body, signature, settings.RAZORPAY_WEBHOOK_SECRET)
+        if not sig_verified and os.environ.get("RAZORPAY_WEBHOOK_SECRET"):
+            sig_verified = verify_razorpay_signature(raw_body, signature, os.environ["RAZORPAY_WEBHOOK_SECRET"])
         if not sig_verified:
             raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail="Invalid Razorpay webhook signature")
 
